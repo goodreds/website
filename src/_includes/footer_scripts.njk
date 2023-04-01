@@ -1,0 +1,55 @@
+<!-- ==========================|========================== -->
+<!--                        SCRIPTS                        -->
+<!-- ==========================|========================== -->
+{# Older browser detection #}
+<script>
+  var ba = ["MSIE", "Trident", "Edge"];
+  var b,
+    ua = navigator.userAgent;
+  for (var i = 0; i < ba.length; i++) {
+    if (ua.indexOf(ba[i]) > -1) {
+      b = ba[i];
+      break;
+    }
+  }
+  if (b == "MSIE" || b == "Trident" || b == "Edge") {
+    b = "Internet Explorer";
+    alert(
+      "You are using the " +
+      b +
+      " browser and this browser is incompatible with this website and many others.  Please open this page in a different browser, either Chrome or Firefox.  Thank you!"
+    );
+  }
+</script>
+<!-- ==========================|========================== -->
+<!-- The preference has been made for the Alpine plugins
+         to be hosted locally as they are very small and by
+         including them it ensures that they are not
+         auto-updated via NPM (the other option for including
+         the plugins). The plugins must be loaded before
+         Alpine.js -->
+<!-- ==========================|========================== -->
+<!--              mask.js (Alpine plugin)              -->
+<!-- ==========================|========================== -->
+<script src="/js/mask.js" defer></script>
+<!-- ==========================|========================== -->
+<!--              collapse.js (Alpine plugin)              -->
+<!-- ==========================|========================== -->
+<script src="/js/collapse.js" defer></script>
+<!-- ==========================|========================== -->
+<!--                       Alpine.js                       -->
+<!-- ==========================|========================== -->
+<!-- https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/ -->
+<script src="/js/alpine.js" defer></script>
+<!-- ==========================|========================== -->
+<!--                       Swiper.js                       -->
+<!-- ==========================|========================== -->
+
+<!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+<!-- ==========================|========================== -->
+<!--                       Iodine.js                       -->
+<!-- ==========================|========================== -->
+<!-- <script
+      src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine/dist/iodine.min.umd.js"
+      defer
+    ></script> -->

@@ -1,0 +1,103 @@
+---
+title: Home
+description: This is the homepage of GOODREDS.
+layout: 'default.njk'
+eleventyNavigation:
+  key: home
+  order: 1
+  icon: nav-icon-home.svg
+---
+
+{% block content %}
+<!-- ==========================|========================== -->
+<!--                         HERO                          -->
+<!-- ==========================|========================== -->
+  <div id="hero-container" class="w-full">
+    {% block hero %}
+    {% include '_components/hero.njk' %}
+  {% endblock %}
+</div>
+<!-- ==========================|========================== -->
+<!--                     MAIN-SERVICES                     -->
+<!-- ==========================|========================== -->
+{# Now integrated into the index hero component above #}
+  <div id="main-services-container" class="mx-auto xl:max-w-7xl"> {% block main_services %}
+    {% include '_components/main_services.njk' %}
+  {% endblock %}
+</div>
+<!-- ==========================|========================== -->
+<!--                     Business info                     -->
+<!-- ==========================|========================== -->
+  <div class="pt-24 relative z-30"> <div class="mx-auto">
+    {% block business_info_1 %}
+      {% include '_components/business_info_1.njk' %}
+    {% endblock %}
+  </div>
+</div>
+<div class="pt-24">
+  <div class="mx-auto ">
+    {% block business_info_2 %}
+      {% include '_components/business_info_2.njk' %}
+    {% endblock %}
+  </div>
+</div>
+<!-- ==========================|========================== -->
+<!--                     CORE WEB VITALS                   -->
+<!-- ==========================|========================== -->
+  <div class=""> <div class="">
+    {% block core_web_vitals %}
+      {% include '_components/core_web_vitals.njk' %}
+    {% endblock %}
+  </div>
+</div>
+
+<!-- ==========================|========================== -->
+<!--                  CONTINUED SERVICES                   -->
+<!-- ==========================|========================== -->
+  <div class=""> <div class="relative z-10 mx-auto lg:pt-24">
+    {% block business_info_3 %}
+      {% include '_components/business_info_3.njk' %}
+    {% endblock %}
+  </div>
+</div>
+<!-- ==========================|========================== -->
+<!--                          FAQs                         -->
+<!-- ==========================|========================== -->
+  <div class=""> <div class="relative z-30 mx-auto pt-24">
+    {% block faqs %}
+      {% include '_components/faqs.njk' %}
+    {% endblock %}
+  </div>
+</div>
+<!-- ==========================|========================== -->
+<!--                     CONTACT FORM                      -->
+<!-- ==========================|========================== -->
+  <div class="default-bg-color-alt"> <div class="relative z-10 mx-auto xl:max-w-7xl pt-24">
+    {% block contact_form %}
+      {% include '_components/contact_form.njk' %}
+    {% endblock %}
+  </div>
+</div>
+<!-- ==========================|========================== -->
+<!--                     PRICING                      -->
+<!-- ==========================|========================== -->
+  <div class="default-bg-color-alt"> <div class="relative z-0 mx-auto xl:max-w-7xl pt-24 pb-36">
+    {% block pricing %}
+      {% include '_components/pricing.njk' %}
+    {% endblock %}
+  </div>
+</div>
+<!-- ==========================|========================== -->
+<!--                     FEATURED POSTS                    -->
+<!-- ==========================|========================== -->
+{# {% block featured_posts %}
+      <div class="default-bg-color-alt"> <div class="mx-auto xl:max-w-7xl pb-48 py-12 px-4">
+        <h1 class="caps-header pb-0 text-center mb-16">featured posts</h1>
+        <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {% for post in collections.featured | reverse %}
+            {% include 'posts-snippet.njk' %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endblock %} #}{% endblock %}

@@ -1,0 +1,35 @@
+{
+  "name": "Goodreds Design",
+  "location": "South-east Queensland",
+  "address": {
+    "streetNo": "",
+    "street": "",
+    "town": "Brisbane",
+    "state": "Queensland",
+    "country": "Australia",
+    "postcode": "4101"
+  },
+  "businessNumber": "35117011216",
+  "businessEmail": "contact@goodreds.net",
+  "businessType": "web development",
+
+  "yearStarted": "2002",
+  "phone": "0402 693763",
+  "keywords": {
+    "keyword1": "website",
+    "keyword2": "design",
+    "keyword3": "development",
+    "keyword4": "hosting",
+    "keyword5": "subscription"
+  },
+  "socialGraph": {
+    "title": "Open graph title",
+    "type": "https://ogp.me/#types",
+    "image": "image URL",
+    "url": "permanent URL",
+    "secureUrl": "https version of URL"
+  },
+  "branding": {
+    "primaryColor": "amber"
+  }
+}

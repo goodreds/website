@@ -1,0 +1,46 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libvpx7 libevent-2.1-7 libopus0 libharfbuzz-icu0 libhyphen0 libmanette-0.2-0 libgles2
+        npm ci
+
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps chromium firefox webkit
+
+    - name: Run Playwright tests
+      run: node tests/playwright/test.js
+
+    - name: Install Mocha and Istanbul
+      run: npm install mocha nyc
+
+    - name: Run Mocha tests with coverage
+      run: npx nyc --reporter=lcov --reporter=text mocha "tests/mocha/**/*.test.js"
+
+

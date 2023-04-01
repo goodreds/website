@@ -1,0 +1,11 @@
+<!-- ==========================|========================== -->
+<!--                    HERO - ABOUT                       -->
+<!-- ==========================|========================== -->
+  <section id="hero"> {% for heroContent in data.client.heroes %}
+    {% if heroContent.page === 'about' %}
+      {% block hero %}
+        {% include '../_components/hero-snippet.njk' %}
+      {% endblock %}
+    {% endif %}
+  {% endfor %}
+</section>

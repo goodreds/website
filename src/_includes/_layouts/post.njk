@@ -1,0 +1,47 @@
+---
+layout: 'default.njk'
+---
+
+<article>
+  <div class="w-full">
+    <figure
+      class="post-figure overflow-hidden">
+
+      {# headerImage - full width images #}
+
+      {# Light theme header image #}
+      <picture class="block dark:hidden">
+        <source media="(min-width: 1280px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET" }}{{ BLOG_cloudinaryUrlApiXl or "BLOG_cloudinaryUrlApiXl NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET" }}-light.webp"/>
+        <source media="(min-width: 1024px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiLg or "BLOG_cloudinaryUrlApiLg NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-light.webp"/>
+        <source media="(min-width: 768px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiMd or "BLOG_cloudinaryUrlApiMd NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-light.webp"/>
+        <source media="(min-width: 640px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiSm or "BLOG_cloudinaryUrlApiSm NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-light.webp"/>
+        <img class="max-w-full h-auto mx-auto" aria-hidden="true" loading="lazy" decoding="async" src="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiDefault or "BLOG_cloudinaryUrlApiDefault NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-light.webp" alt="{{ imageAlt }}"/>
+      </picture>
+
+      {# Dark theme header image #}
+      <picture class="hidden dark:block">
+        <source media="(min-width: 1280px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiXl or "BLOG_cloudinaryUrlApiXl NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-dark.webp"/>
+        <source media="(min-width: 1024px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiLg or "BLOG_cloudinaryUrlApiLg NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-dark.webp"/>
+        <source media="(min-width: 768px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiMd or "BLOG_cloudinaryUrlApiMd NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-dark.webp"/>
+        <source media="(min-width: 640px)" srcset="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiSm or "BLOG_cloudinaryUrlApiSm NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-dark.webp"/>
+        <img class="max-w-full h-auto mx-auto" aria-hidden="true" loading="lazy" decoding="async" src="{{ cloudinaryUrlRoot or "cloudinaryUrlRoot NOT SET"}} {{ BLOG_cloudinaryUrlApiDefault or "BLOG_cloudinaryUrlApiDefault NOT SET" }}{{ cloudinaryUrlBranch or "cloudinaryUrlBranch NOT SET"}}-dark.webp" alt="{{ imageAlt }}"/>
+      </picture>
+
+      {# <figcaption>
+      </figcaption> #}
+    </figure>
+  </div>
+  <div class="post-container mx-auto w-5/6 max-w-5xl pb-24">
+    <div class="blog-post py-6">
+      <p class="article-header-headline">News</p>
+      {# <p class="meta uppercase text-xs opacity-50">{{ page.date }}</p> #}
+      {# <p class="meta uppercase text-xs opacity-50">{{ page.data.dateString }}</p> #}
+      <h1 class="font-chinook text-sky-500 dark:text-rose-500">{{ title }}</h1>
+      <hr class="border-sky-500 dark:border-rose-600 w-1/6 border-2 mt-4"></div>
+      <div class="post-content">
+        {{ content | safe }}
+      </div>
+      <p class="pt-6 opacity-75 uppercase text-xs">{{ tags }}</p>
+    </div>
+  </div>
+</article>

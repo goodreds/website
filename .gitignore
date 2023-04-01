@@ -1,0 +1,12 @@
+.DS_Store
+.env
+goodreds.netlify.app_*.report.html
+.netlify
+node_modules
+.prettierrc
+robots.txt
+_scratchfile.html
+_site/
+_text/
+tailwind.config.js
+.vscode/

@@ -1,0 +1,140 @@
+<!-- ==========================|========================== -->
+<!--                         FOOTER                        -->
+<!-- ==========================|========================== -->
+  <footer class=""> <div class="mx-auto max-w-screen-xl space-y-8 overflow-hidden px-4 sm:px-6">
+    <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
+      <div class="px-5 py-2">
+        <a
+          href="/#"
+          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+          Home
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a
+          href="/#business_info_1"
+          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+          Services
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a
+          href="/news"
+          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+          News
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a
+          href="/#pricing"
+          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+          Pricing
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a
+          href="/#contact"
+          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+          Contact
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a
+          href="/admin"
+          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+          Admin
+        </a>
+      </div>
+    </nav>
+    <div class="mt-8 flex justify-center space-x-8">
+      <a href="/#" class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+        <span class="sr-only">Github</span>
+        {# Github icon #}
+        <img class="block dark:hidden drop-shadow-sm h-6 w-6" src="../../_assets/_icons/_footer-icons/github.svg"/>
+        <img class=" dark:block hidden drop-shadow-sm h-6 w-6" src=" ../../_assets/_icons/_footer-icons/github-dark.svg"/>
+      </a>
+      <a href="/#" class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+        <span class="sr-only">Instagram</span>
+        {# Instagram icon #}
+        <img class="block dark:hidden drop-shadow-sm h-6 w-6" src="../../_assets/_icons/_footer-icons/instagram.svg"/>
+        <img class=" dark:block hidden drop-shadow-sm h-6 w-6" src=" ../../_assets/_icons/_footer-icons/instagram-dark.svg"/>
+      </a>
+      <a href="/#" class="-mt-1 text-stone-400 opacity-90 hover:text-stone-500">
+        <span class="sr-only">{{ business.name }}</span>
+        {# GD icon #}
+        <img class="block dark:hidden drop-shadow-sm h-8 w-auto" src="../../_assets/_logos/winter.svg"/>
+        <img class=" dark:block hidden drop-shadow-sm h-8 w-auto" src=" ../../_assets/_logos/summer.svg "/>
+      </a>
+      <a href="/#" class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+        <span class="sr-only">Twitter</span>
+        {# Twitter icon #}
+        <img class="block dark:hidden drop-shadow-sm h-6 w-6" src="../../_assets/_icons/_footer-icons/twitter.svg"/>
+        <img class=" dark:block hidden drop-shadow-sm h-6 w-6" src=" ../../_assets/_icons/_footer-icons/twitter-dark.svg"/>
+      </a>
+      <a
+        href="https://mstdn.social/@goodreds"
+        class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+        <span class="sr-only">Mastodon</span>
+        {# Mastodon icon #}
+        <img class="block dark:hidden drop-shadow-sm h-6 w-6" src="../../_assets/_icons/_footer-icons/mastodon-light.svg"/>
+        <img class=" dark:block hidden drop-shadow-sm h-6 w-6" src=" ../../_assets/_icons/_footer-icons/mastodon-dark.svg"/>
+      </a>
+      {# <a href="/#" class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+                    <span class="sr-only">Tiktok</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-brand-tiktok"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5"></path>
+                    </svg>
+                  </a> #}
+    </div>
+    <div class="w-full flex items-center justify-center ">
+      <p class="text-center text-base text-stone-700 dark:text-stone-200">
+        <span class="font-light opacity-90">
+          {{ data.client.business.businessName }}.
+        {{ data.client.business.address.town }}</span><br/>
+        <!-- Uses (in eleventy.js):
+              eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+            See https://11ty.rocks/eleventyjs/dates/ -->
+        © {% year %}. All rights reserved.
+      </p>
+    </div>
+    <span class="block invisible">
+      <a rel="me" href="https://mstdn.social/@goodreds">Mastodon</a>
+    </span>
+    {# Phone details (optional) #}
+    {#
+                                <!-- <div
+                                  class="flex flex-col items-center gap-2 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-phone"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                                    ></path>
+                                  </svg>
+                                  <p class="text-center text-base">{{ business.phone }}</p>
+                                </div> -->
+                                #}
+  </div>
+</footer>

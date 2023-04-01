@@ -1,0 +1,63 @@
+<!-- ==========================|========================== -->
+<!--                        Top bar                        -->
+<!-- ==========================|========================== -->
+<div
+  class="bg-stone-50 dark:bg-stone-800 default-text-color default-shadow sticky top-0 left-0 right-0 z-50 border-b p-4 shadow-md dark:border-slate-900 border-slate-700/20">
+  {# Internal container for the announcement bubble and theme toggle switch #}
+  <div class="mx-auto flex justify-between lg:max-w-7xl">
+    {# Announcement bubble #}
+    <div id="announcement" class="flex items-center space-x-2 rounded-full bg-gradient-to-tr from-lime-600 to-lime-400 py-1 px-2 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-speakerphone h-6 w-6 -rotate-12"
+        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M18 8a3 3 0 0 1 0 6"></path>
+        <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5"></path>
+        <path
+          d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8">
+        </path>
+      </svg>
+      <p class="self-center pr-4 text-sm font-bold leading-5 tracking-wide">
+        Available now<span class="hidden md:inline"></span>
+      </p>
+    </div>
+
+    <div id="dark-theme-toggle-switch" class="flex items-center justify-end space-x-2">
+      <!-- ==========================|========================== -->
+      <!--                     Sunshine icon                     -->
+      <!-- ==========================|========================== -->
+      <span class="text-yellow-400 dark:text-stone-600">
+        <svg class="h-6 w-6 fill-yellow-400 dark:fill-stone-600 stroke-yellow-500 dark:stroke-stone-600" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364-.707-.707M6.343 6.343l-.707-.707m12.728 0-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
+        </svg>
+      </span>
+      <!-- ==========================|========================== -->
+      <!--                     Theme toggle                      -->
+      <!-- ==========================|========================== -->
+      <label for="toggle"
+        x-data
+        x-tooltip="Toggle to change theme"
+        type="button"
+        class="flex h-7 w-12 cursor-pointer items-center rounded-full bg-gradient-to-l from-sky-600 to-sky-400 p-1 duration-300 ease-in-out dark:from-sky-700 dark:to-sky-900">
+        <div
+          class="toggle-dot h-5 w-5 transform rounded-full bg-gradient-to-b from-amber-200 to-amber-500 shadow-md duration-300 ease-in-out dark:translate-x-5 dark:from-stone-50 dark:to-stone-400">
+        </div>
+      </label>
+      <!-- ==========================|========================== -->
+      <!--                       Moon icon                       -->
+      <!-- ==========================|========================== -->
+      <!-- Dark icon -->
+      <span class="text-stone-200 dark:text-stone-50">
+        <svg class="h-6 w-6 fill-stone-200 dark:fill-amber-500 dark:stroke-amber-500" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </span>
+      <input id="toggle" name="toggle" type="checkbox" class="hidden" :value="darkMode"
+        @change="darkMode = !darkMode" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+<div
+   class="bg-neutral-50 dark:bg-neutral-800 md:rounded-md overflow-clip md:shadow-md relative">
+   {# <p class="text-black bg-orange-500 h-24">Cloudinary URL: {{ post.data.cloudinaryimage }}</p> #}
+   <div class="relative flex w-full scroll-m-4 snap-x snap-mandatory gap-4 overflow-x-auto">
+      {# Card needs to organise into a gallery the following content, accessed in the given order: Image(s) -> Video(s) -> MP3(s) #}
+      {# Image(s) lookup #}
+         {% for i in post.data.images %}
+            <div
+            class="shrink-0 touch-auto snap-center default-border w-full h-auto"> {# {% eleventyImage '_assets/_images/summer-animate.png', 'Summer logo' %} #}
+            {% for img in images %}
+               {% eleventyImage img.image, imageAlt, imageAttributes %}
+            {% endfor %}
+            <img class="overflow-hidden object-cover object-center" src="{{ i.image }}"></div>
+         {% endfor %}
+         {# Video(s) lookup #}
+         {% for j in post.data.videos %}
+            <video
+               controls
+               preload="none"
+               autopictureinpicture="true"
+               poster="https://res.cloudinary.com/ariesdubs/image/upload/v1665031516/aries/poster-video_2x-8.webp"
+               class="shrink-0 touch-auto snap-center default-border w-full">
+               <source class="overflow-hidden object-cover object-center" src="{{ j.video }}.webm" type="video/webm">
+                  <source class="overflow-hidden object-cover object-center" src="{{ j.video }}.mp4" type="video/mp4"></video>
+               {% endfor %}
+               {# MP3(s) lookup #}
+               {% if post.data.music %}
+                  <div class="shrink-0 touch-auto snap-center default-border w-full h-auto">
+                     <div class="relative">
+                        <img class="overflow-hidden object-cover object-center" src="{{ post.data.music.artwork }}.webp" alt="">
+                           <audio controls class="w-full absolute bottom-0cal left-0" src="{{ post.data.music.mp3 }}">
+                              Your browser does not support the
+                              <code>audio</code>
+                              element.
+                           </audio>
+                        </div>
+                     </div>
+                  {% endif %}
+                  {% if (post.data.images | length + post.data.videos | length) > 1 or (post.data.music | length > 2) %}
+                     <div class="absolute bottom-2 right-2">
+                        <div id="galleryNav" class="flex-center-outer text-black dark:text-white justify-end float-right opacity-70">
+                           <img class="w-12 h-12 animate-bounce" src="../../_assets/_icons/_figma/icon-hand-move-white.svg"/>
+                        </div>
+                     </div>
+                  {% endif %}
+               </div>
+               <div class="p-4 static">
+                  <div class="mb-12">
+                     <h2 class="mt-2 text-3xl font-chinook">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                     </h2>
+                     <p class="pt-2 text-lg">{{ post.data.description }}</p>
+                     {% if post.data.externalURL %}
+                        <button class="bg-sky-500 dark:bg-sky-300 hover:bg-sky-400 dark:hover:bg-sky-400 my-3 py-2 px-6 rounded-md w-full">
+                           <a class="uppercase font-bold align-middle pb-1 tracking-widest text-sm" href="{{ post.data.externalURL }}">
+                              <span class="text-white dark:text-black">{{ post.data.externalURLtext }}</span>
+                           </a>
+                        </button>
+                     {% endif %}
+                  </div>
+                  <div class="absolute bottom-0 left-0 p-4 w-full flex flex-row justify-between">
+                     <ul class="flex opacity-70">
+                        {% for tag in post.data.tags %}
+                           {% if tag == "post" %}
+                              {# This is empty to avoid creating the list item for the 'post' tag #}
+                           {% else %}
+                              {% if tag == "culture" %}
+                                 <li class="py-1.5 px-2 pr-3 mr-4 bg-amber-200/30 dark:bg-amber-700/30 rounded-md flex gap-x-2 flex-center-outer">
+                                    <img class="w-4 h-auto" src="../../_assets/_icons/_categories/nav-icon-booking.svg" alt=""/>
+                                    <span class="uppercase text-xs tracking-wider flex-center-inner">
+                                       <a href="/{{ tag }}">{{ tag }}</a>
+                                    </span>
+                                 </li>
+                              {% elseif tag == "learn" %}
+                                 <li class="py-1.5 px-2 pr-3 mr-4 bg-fuchsia-200/30 dark:bg-pink-700/30 rounded-md flex gap-x-2 flex-center-outer">
+                                    <img class="w-4 h-auto" src="../../_assets/_icons/_categories/nav-icon-releases.svg" alt=""/>
+                                    <span class="uppercase text-xs tracking-wider flex-center-inner">
+                                       <a href="/{{ tag }}">{{ tag }}</a>
+                                    </span>
+                                 </li>
+                              {% elseif tag == "other" %}
+                                 <li class="py-1.5 px-2 pr-3 mr-4 bg-orange-200/30 dark:bg-orange-700/30 rounded-md flex gap-x-2 flex-center-outer">
+                                    <img class="w-4 h-auto" src="../../_assets/_icons/_navigation/nav-icon-merch.svg" alt=""/>
+                                    <span class="uppercase text-xs tracking-wider flex-center-inner">
+                                       <a href="/{{ tag }}">{{ tag }}</a>
+                                    </span>
+                                 </li>
+                              {% elseif tag == "product" %}
+                                 <li class="py-1.5 px-2 pr-3 mr-4 bg-lime-200/30 dark:bg-lime-700/30 rounded-md flex gap-x-2 flex-center-outer">
+                                    <img class="w-4 h-auto" src="../../_assets/_icons/_categories/nav-icon-shows.svg" alt=""/>
+                                    <span class="uppercase text-xs tracking-wider flex-center-inner">
+                                       <a href="/{{ tag }}">{{ tag }}</a>
+                                    </span>
+                                 </li>
+                              {% elseif tag == "release" %}
+                                 <li class="py-1.5 px-2 pr-3 mr-4 bg-sky-200/30 dark:bg-sky-700/30 rounded-md flex gap-x-2 flex-center-outer">
+                                    <img class="w-4 h-auto" src="../../_assets/_icons/_categories/nav-icon-news.svg" alt=""/>
+                                    <span class="uppercase text-xs tracking-wider flex-center-inner">
+                                       <a href="/{{ tag }}">{{ tag }}</a>
+                                    </span>
+                                 </li>
+                              {% endif %}
+                           {% endif %}
+                        {% endfor %}
+                     </ul>
+                     {# date #}
+                     <div class="flex flex-row text-sm bg-neutral-200 dark:bg-neutral-700 py-1 px-4 md:rounded-sm opacity-90">
+                        <p class="text-neutral-700 dark:text-neutral-400">{{ post.date.getDate() }}</p>
+                        <p class="text-neutral-700 dark:text-neutral-400 px-0.5">/</p>
+                        <p class="text-neutral-700 dark:text-neutral-400">{{ post.date.getMonth()+1 }}</p>
+                        <p class="text-neutral-700 dark:text-neutral-400 px-0.5">/</p>
+                        <p class="text-neutral-700 dark:text-neutral-400">{{ post.date.getYear()-100 }}</p>
+                     </div>
+                     {# end date #}
+                  </div>
+               </div>
+            </div>

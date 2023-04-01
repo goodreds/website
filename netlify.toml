@@ -1,0 +1,16 @@
+# Configure the functions directory
+[build]
+  functions = "functions"
+
+# Redirect all requests from /api/* to the corresponding Netlify function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Configure the Netlify plugin to inline environment variables in functions
+[[plugins]]
+  package = "netlify-plugin-inline-functions-env"
+  # Configure the plugin inputs to include the CONTEXT environment variable
+  [plugins.inputs]
+    include = ["CONTEXT"]

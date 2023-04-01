@@ -1,0 +1,63 @@
+---
+title: Contact
+description: This is the contact page.
+eleventyNavigation:
+  key: contact
+  order: 6
+  icon: nav-icon-contact.svg
+---
+
+{# Things to be included on the contact page:
+    - who you are
+    - your address
+    - hours
+    - an interactive map with a link out to Google Maps
+    - your phone number
+    - linked so you can call from mobile
+    - simple contact form
+    - don't require a bunch of stuff unless you absolutely need it
+    - use a simple checkbox captcha
+    - Perhaps a simple/short FAQ for really common questions that might reduce incoming requests.
+
+    [https://www.reddit.com/r/web_design/comments/wq0dn9/in_your_opinion_what_makes_a_good_contact_us_page/]
+ #}
+
+{# The layout to use #}
+{% extends "src/_includes/default.njk" %}
+{% block content %}
+<!-- ==========================|========================== -->
+<!--                         HERO                          -->
+<!-- ==========================|========================== -->
+{% block hero %}
+<div id="hero-container" class="w-full">
+  {% include '_components/hero-contact.njk' %}
+</div>
+{% endblock %}
+<!-- ==========================|========================== -->
+<!--                       TEST LAB                        -->
+<!-- ==========================|========================== -->
+{% block test_lab %}
+<div id="test-lab" class="mt-64 w-full border-4 border-red-500 z-[100]">
+  {# <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint facere, nostrum fugiat qui voluptatem omnis cum adipisci, perferendis hic id autem delectus, illum alias ullam corrupti tempora? Necessitatibus, natus libero?</p> #}
+  {# {% include '_ui/_html/_components/_marketing/_sections/_heroes/_with_angled_image_on_right.njk' %} #}
+  {# {% include '_ui/_html/_components/_marketing/_sections/_blog-sections/_2_column_with_sign_up.njk' %} #}
+  {# {% include '_ui/_html/_components/_marketing/_sections/_header/_with_background_image_and_overlapping_cards.njk' %} #}
+</div>
+{% endblock %}
+<!-- ==========================|========================== -->
+<!--                     CONTACT FORM                      -->
+<!-- ==========================|========================== -->
+{% block contact_form %}
+<div class="relative z-10 pt-48 mx-auto xl:max-w-7xl">
+  {% include '_components/contact_form.njk' %}
+</div>
+{% endblock %}
+<!-- ==========================|========================== -->
+<!--                        PRICING                        -->
+<!-- ==========================|========================== -->
+{% block pricing %}
+<div class="mx-auto xl:max-w-7xl py-24">
+  {% include '_components/pricing.njk' %}
+</div>
+{% endblock %}
+{% endblock %}

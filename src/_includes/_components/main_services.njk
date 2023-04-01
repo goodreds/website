@@ -1,0 +1,24 @@
+{# Main services #}
+<section id="main-services" class="my-36 dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-neutral-900 bg-white relative flex flex-col
+    justify-center gap-y-8 gap-x-4 rounded-3xl shadow-md shadow-sky-100 dark:shadow-none md:flex-row md:overflow-visible
+    md:pb-8 text-center sm:text-left md:text-center w-11/12 mx-auto px-8 md:px-12 border border-white dark:border-none">
+  {% for mainService in data.client.mainServices %}
+  <div id="main-service-single-mobile" class="flex w-full flex-col px-4 gap-x-6 text-stone-900 dark:text-stone-200 sm:flex-row md:-mt-24 md:w-1/3 md:flex-col md:px-4">
+    <div class="main-service-icon-container bg-center mx-auto"
+      style="background: url(../_assets/_backgrounds/splat-{{ mainService.id }}.svg) no-repeat;">
+      <!-- Mobile icon -->
+      <img class="block dark:hidden h-auto w-full drop-shadow-md sm:h-32 sm:w-32"
+        src="../../_assets/_icons/_services/{{ mainService.icon }}" alt="{{ mainService.name }} icon" />
+      <img class="dark:block hidden h-auto w-full drop-shadow-md sm:h-32 sm:w-32"
+        src="../../_assets/_icons/_services/{{ mainService.iconAlt }}" alt="{{ mainService.name }} icon" />
+    </div>
+    <div class="flex flex-col dark:drop-shadow-sm md:mt-6 pb-4 md:pl-0">
+      <h2 class="leading-tight text-stone-900 dark:text-stone-100 md:mb-2 text-3xl font-chinook ">
+        {{ mainService.name }}</h2>
+      <p class="basic-body">
+        {{ mainService.description }}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</section>

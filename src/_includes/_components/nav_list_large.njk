@@ -1,0 +1,14 @@
+{% set navPages = collections.all | eleventyNavigation %}
+<ul class="lg:navigation-unordered_list-large">
+  {%- for entry in navPages %}
+    <li class="lg:navigation-unordered_list-item-large">
+      <span class="lg:navigation-unordered_list-item_icon-large">
+        <img src="../../_assets/_icons/_navigation/{{ entry.icon | safe }}"
+                alt="">
+      </span>
+      <span class="lg:navigation-unordered_list-item_text_link-large">
+        <a {% if entry.url == page.url %} class="active-class" {% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+      </span>
+    </li>
+  {%- endfor %}
+</ul>

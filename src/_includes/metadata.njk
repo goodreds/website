@@ -1,0 +1,98 @@
+<head>
+  <!-- Set page title dynamically based on business name and page title -->
+  <title>{{ business.name }} | {{ title }}</title>
+
+  <!-- Meta tags for charset, compatibility, and viewport -->
+  <meta charset="UTF-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+  <!-- Add a meta description tag if a description is provided -->
+  {% if description %}
+    <meta name="description" content="{{ description }}"/>
+  {% endif %}
+
+  <!-- Meta tags for SEO keywords and social media display -->
+  <meta name="keywords" content=""/>
+  <meta property="og:title" content="{{ business.socialGraph.title }}"/>
+  <meta property="og:description" content="{{ business.businessType or "Default Business Type" }} since {{ business.yearFounded or "Default Business Year Founded" }}."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="business.socialGraph.url"/>
+  <meta property="og:image" content="business.socialGraph.image"/>
+  <meta property="og:image:secure_url" content="business.socialGraph.secureUrl"/>
+
+  <!-- Favicon links for various devices and sizes -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v1"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+  <!-- TODO: Add PWAs support with .webmanifest file -->
+  <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+  <meta name="msapplication-TileColor" content="#da532c"/>
+  <meta name="theme-color" content="#ffffff"/>
+
+  <!-- Set the canonical URL for SEO purposes -->
+  <link rel="canonical" href=""/>
+
+  <!-- Link to the main CSS stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+
+  <!-- Preconnect to Cloudinary to improve performance -->
+  <link rel="preconnect" href="https://res.cloudinary.com"/>
+
+  {# Tooltip JS / Alpine #}
+  {# TODO: Consider hosting external scripts locally for better performance and offline support - see eleventy.js #}
+
+  <!-- Tippy.js for tooltips -->
+  <!-- https://atomiks.github.io/tippyjs/v6 -->
+  <script src="https://unpkg.com/@popperjs/core@2"> </script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  {# The first script initializes tooltips using the Tippy.js library in conjunction with Alpine.js. It defines an Alpine.js magic helper called $tooltip and a custom directive called x-tooltip. The tooltips are triggered manually and have a default duration of 2 seconds (2000 milliseconds). #}
+  <!-- Initialize Tippy.js tooltips with Alpine.js magic helper and custom directive -->
+  <script>
+    document.addEventListener('alpine:init', () => { // Magic: $tooltip
+      Alpine.magic('tooltip', el => message => {
+        let instance = tippy(el, {
+          content: message,
+          trigger: 'manual'
+        })
+        instance.show()
+        setTimeout(() => {
+          instance.hide()
+          setTimeout(() => instance.destroy(), 150)
+        }, 2000)
+      })
+      // Directive: x-tooltip
+      Alpine.directive('tooltip', (el, {expression}) => {
+        tippy(el, {content: expression})
+      })
+    })
+  </script>
+
+  {# The second script is a JSON-LD schema for SEO purposes. It defines the website's structured data using the Schema.org vocabulary, specifying the @type as "WebSite", the name as "goodreds design", and the url as "http://goodreds.net". This structured data helps search engines understand the content of the website and can improve search ranking. #}
+  <!-- JSON-LD Schema for SEO -->
+  <!-- https://moz.com/blog/json-ld-for-beginners -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "goodreds design",
+      "url": "http://goodreds.net"
+    }
+  </script>
+  <!-- Google Analytics Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MJN81Z2GR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-6MJN81Z2GR");
+  </script>
+  <!-- Netlify CMS Identity Widget for authentication -->
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>

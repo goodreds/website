@@ -1,0 +1,17 @@
+{# Pagination #}
+  <nav aria-labelledby="my-pagination">
+    <ol class="flex gap-x-12 justify-center pb-12">
+      <li>
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}">&larr; Newer</a>
+          {% else %}
+          <span class="text-neutral-100 dark:text-neutral-600">&larr; Newer</span>
+        {% endif %}
+      </li>
+      <li>
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}">Older &rarr;</a>
+          {% else %}<span class="text-neutral-100 dark:text-neutral-600">Older &rarr;</span>{% endif %}
+      </li>
+    </ol>
+  </nav>
