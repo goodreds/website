@@ -1,6 +1,6 @@
 ---
-title: Home
-description: This is the homepage of GOODREDS.
+title: Welcome
+description: This is the welcome/homepage of MyHill Psychology.
 layout: 'default.njk'
 eleventyNavigation:
   key: home
@@ -14,7 +14,7 @@ eleventyNavigation:
 <!-- ==========================|========================== -->
   <div id="hero-container" class="w-full">
     {% block hero %}
-    {% include '_components/hero.njk' %}
+    {# {% include '_components/hero.njk' %} #}
   {% endblock %}
 </div>
 <!-- ==========================|========================== -->
@@ -22,13 +22,13 @@ eleventyNavigation:
 <!-- ==========================|========================== -->
 {# Now integrated into the index hero component above #}
   <div id="main-services-container" class="mx-auto xl:max-w-7xl"> {% block main_services %}
-    {% include '_components/main_services.njk' %}
+    {# {% include` '_components/main_services.njk' %} #}
   {% endblock %}
 </div>
 <!-- ==========================|========================== -->
 <!--                     Business info                     -->
 <!-- ==========================|========================== -->
-  <div class="pt-24 relative z-30"> <div class="mx-auto">
+  <div class="pt-48 relative z-30"> <div class="mx-auto">
     {% block business_info_1 %}
       {% include '_components/business_info_1.njk' %}
     {% endblock %}

@@ -1,26 +1,26 @@
 {
-  "name": "Goodreds Design",
-  "location": "South-east Queensland",
+  "name": "MyHill Psychology",
+  "location": "Burpengary, Queensland",
   "address": {
     "streetNo": "",
     "street": "",
-    "town": "Brisbane",
+    "town": "Burpengary",
     "state": "Queensland",
     "country": "Australia",
-    "postcode": "4101"
+    "postcode": ""
   },
-  "businessNumber": "35117011216",
-  "businessEmail": "contact@goodreds.net",
-  "businessType": "web development",
+  "businessNumber": "",
+  "businessEmail": "myhillpsychology@gmail.com",
+  "businessType": "Psycologist",
 
-  "yearStarted": "2002",
-  "phone": "0402 693763",
+  "yearStarted": "2023",
+  "phone": "",
   "keywords": {
-    "keyword1": "website",
-    "keyword2": "design",
-    "keyword3": "development",
-    "keyword4": "hosting",
-    "keyword5": "subscription"
+    "keyword1": "psychology",
+    "keyword2": "EMDRIA",
+    "keyword3": "MAPS",
+    "keyword4": "",
+    "keyword5": ""
   },
   "socialGraph": {
     "title": "Open graph title",

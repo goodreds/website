@@ -1,21 +1,27 @@
 <!-- ==========================|========================== -->
 <!--               LOGO & NAVIGATION FLEXBOX               -->
 <!-- ==========================|========================== -->
-  <div class="fixed left-0 right-0 z-40 bg-gradient-to-b from-stone-50/90 via-stone-50/30 to-stone-50/0 px-4 dark:from-stone-900 dark:via-stone-900/50 dark:to-transparent ">
-  <div class="flex items-center xl:max-w-7xl mx-auto lg:h-28 xl:h-36">
-    <section id="logo-container" class="hidden lg:flex flex-row space-x-1 lg:mx-auto lg:w-5/6 xl:max-w-7xl ">
-      <!-- ==========================|========================== -->
-      <!--                          LOGO                         -->
-      <!-- ==========================|========================== -->
-      <a href="/" title="back to homepage" class="mx-auto flex-none items-center self-center w-full">
+  <div class="fixed left-0 right-0 z-40 bg-gradient-to-b from-stone-50/90 via-stone-50/30 to-stone-50/0 px-4 dark:from-stone-900
+    dark:via-stone-900/50 dark:to-transparent "> <div class="flex items-center xl:max-w-7xl mx-auto lg:h-28 xl:h-36">
+    <!-- ==========================|========================== -->
+    <!--                          LOGO                         -->
+    <!-- ==========================|========================== -->
+      <section id="logo-container" class="hidden lg:flex flex-row space-x-1 lg:mx-auto lg:w-5/6 xl:max-w-7xl "> <a href="/" title="back to homepage" class="mx-auto flex-none items-center self-center w-full">
         <div class="flex flex-row items-center">
-          <img class="inline-block dark:hidden drop-shadow-md h-12 md:h-16 w-auto xl:h-24" src="../../_assets/_logos/winter.svg"/>
-          <img class="inline-block dark:hidden drop-shadow-md h-12 pl-1 invisible xl:visible" src="../../_assets/_logos/text-winter.svg"/>
+          <img
+            class="inline-block dark:hidden drop-shadow-md h-12 md:h-16 w-auto xl:h-24"
+            src="../../_assets/_logos/myhill-logo-light-sm.svg "/>
+          <img
+            class="inline-block dark:hidden drop-shadow-md h-8 pl-3 invisible xl:visible"
+            src="../../_assets/_logos/myhill-logo-light-lg.svg "/>
         </div>
-
         <div class="flex flex-row items-center">
-          <img class="dark:inline-block hidden drop-shadow-md h-12 md:h-16 w-auto xl:h-24" src="../../_assets/_logos/summer.svg "/>
-          <img class="hidden dark:inline-block drop-shadow-md h-12 pl-1 invisible xl:visible" src="../../_assets/_logos/text-summer.svg"/>
+          <img
+            class="dark:inline-block hidden drop-shadow-md h-12 md:h-16 w-auto xl:h-24"
+            src="../../_assets/_logos/myhill-logo-dark-sm.svg "/>
+          <img
+            class="hidden dark:inline-block drop-shadow-md h-8 pl-3 invisible xl:visible"
+            src="../../_assets/_logos/myhill-logo-dark-lg.svg"/>
         </div>
       </a>
     </section>
@@ -29,8 +35,8 @@
           @click="open = !open"
           class="flex items-center justify-center w-full h-full focus:outline-none"
           aria-label="Home">
-          <img class="block dark:hidden drop-shadow-sm h-24 w-auto" src="../../_assets/_logos/winter.svg"/>
-          <img class=" dark:block hidden drop-shadow-sm h-24 w-auto" src=" ../../_assets/_logos/summer.svg "/>
+          <img class="block dark:hidden drop-shadow-sm h-24 w-auto" src="../../_assets/_logos/myhill-logo-light-sm.svg"/>
+          <img class=" dark:block hidden drop-shadow-sm h-24 w-auto" src=" ../../_assets/_logos/myhill-logo-dark-sm.svg "/>
         </button>
       </div>
       {# <!-- Hamburger menu buttons - remove from page layout entirely when screensize is larger than medium --> #}
@@ -49,13 +55,15 @@
             <p class="slub">Close</p>
             <!-- Mobile nav close icon -->
             <svg class="h-12 w-12" viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="3" fill="#DB2777"/>
+              <rect x="3" y="3" width="18" height="18" rx="3" class="fill-stone-400"/>
               <path d="M8 8l8 8m0-8l-8 8" stroke="#fff" stroke-width="2.667" stroke-linecap="round"/>
             </svg>
           </div>
         </button>
       </div>
-      <div class="flex w-screen h-screen justify-center items-center -mt-12 -ml-4 bg-stone-100/50 dark:bg-stone-800/50 lg:hidden" x-show="open">
+      <div
+        class="flex w-screen h-screen justify-center items-center -mt-12 -ml-4 bg-stone-100/50 dark:bg-stone-800/50 lg:hidden"
+        x-show="open">
         {% block nav_list_small %}
           {% include '_components/nav_list_small.njk' %}
         {% endblock %}
