@@ -9,17 +9,17 @@
     /* text-sky-400  */
     --text_primary_glare-light: 56 189 248;
     /* text-pink-600 */
-    --text_secondary_dark:219 39 119;
+    --text_secondary_dark: 219 39 119;
     /* text-pink-400 */
-    --text_secondary_glare_dark:244 114 182;
+    --text_secondary_glare_dark: 244 114 182;
     /* text-pink-500 */
     --text_neutral_light: 236 72 153;
     /* text-pink-500 */
-    --text_neutral_dark:236 72 153;
+    --text_neutral_dark: 236 72 153;
   }
-    ::selection {
-      @apply bg-sky-600 dark:bg-pink-600 text-white;
-    }
+  ::selection {
+    @apply bg-sky-600 text-white dark:bg-pink-600;
+  }
 }
 
 /* extract repeated utility patterns to custom CSS classes when a template partial feels heavy-handed */
@@ -29,86 +29,86 @@
 
   /* A Modern CSS Reset - https: //piccalil.li/blog/a-modern-css-reset/ */
   /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
     *,
     *::before,
     *::after {
-      box-sizing: border-box;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
-
-        /* Remove default margin */
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        p,
-        figure,
-        blockquote,
-        dl,
-        dd {
-          margin: 0;
-        }
-
-        /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-        ul[role='list'],
-        ol[role='list'] {
-          list-style: none;
-        }
-
-        /* Set core root defaults */
-        html:focus-within {
-          scroll-behavior: smooth;
-        }
-
-        /* Set core body defaults */
-        body {
-          min-height: 100vh;
-          text-rendering: optimizeSpeed;
-          line-height: 1.5;
-        }
-
-        /* A elements that don't have a class get default styles */
-        a:not([class]) {
-          text-decoration-skip-ink: auto;
-        }
-
-        /* Make images easier to work with */
-        img,
-        picture {
-          max-width: 100%;
-          display: block;
-        }
-
-        /* Inherit fonts for inputs and buttons */
-        input,
-        button,
-        textarea,
-        select {
-          font: inherit;
-        }
-
-        /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-        @media (prefers-reduced-motion: reduce) {
-          html:focus-within {
-            scroll-behavior: auto;
-          }
-
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-        }
-                }
+  }
 
   /* ------------------------------------------------------------------ */
   /* ^^^ end of A Modern CSS reset code ^^^  */
 
   /* -------------------- Andy Bell's sensible code defaults ----------------------- */
 
-    /* ==========================|==========================Sensible defaults
+  /* ==========================|==========================Sensible defaults
     Can include text-color, background-color, border-color
     Variations could include inv, contrast
     Also could include primary color, secondary color, tertiary/quaternary color
@@ -125,12 +125,12 @@
     --space-m-l: clamp(1.5rem, 1.19rem + 1.55vw, 2.5rem);
     --space-l: clamp(2rem, 1.84rem + 0.78vw, 2.5rem);
     --space-l-xl: clamp(2rem, 1.46rem + 2.72vw, 3.75rem);
-      --space-l-2xl: clamp(2rem, 1.07rem + 4.66vw, 5rem);
-      --space-xl: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
-      --space-xl-2xl: clamp(3rem, 2.38rem + 3.11vw, 5rem);
-      --space-2xl: clamp(4rem, 3.69rem + 1.55vw, 5rem);
-      --space-2xl-3xl: clamp(4rem, 2.91rem + 5.44vw, 7.5rem);
-      --space-3xl: clamp(6rem, 5.53rem + 2.33vw, 7.5rem);
+    --space-l-2xl: clamp(2rem, 1.07rem + 4.66vw, 5rem);
+    --space-xl: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
+    --space-xl-2xl: clamp(3rem, 2.38rem + 3.11vw, 5rem);
+    --space-2xl: clamp(4rem, 3.69rem + 1.55vw, 5rem);
+    --space-2xl-3xl: clamp(4rem, 2.91rem + 5.44vw, 7.5rem);
+    --space-3xl: clamp(6rem, 5.53rem + 2.33vw, 7.5rem);
 
     --size-step-0: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
     --size-step-1: clamp(1.1875rem, 1.01rem + 0.87vw, 1.75rem);
@@ -140,7 +140,8 @@
     --size-step-5: clamp(2.5rem, 1.08rem + 7.09vw, 7.0625rem);
     --size-step-6: clamp(3rem, 0.84rem + 10.78vw, 9.9375rem);
 
-    --font-base: NexaText, Inter, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    --font-base: NexaText, Inter, Segoe UI, Roboto, Helvetica Neue, Arial,
+      sans-serif;
     --font-serif: Georgia, sans-serif;
 
     --gutter: var(--space-s);
@@ -151,127 +152,117 @@
     --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
     --tracking: -0.05ch;
     --tracking-s: -0.075ch;
-
   }
 
-
   /* ----------------------------------------------------------------------- */
- /* Global Styles */
-html {
-  visibility: hidden;
-}
+  /* Global Styles */
+  html {
+    visibility: hidden;
+  }
 
-body {
-  @apply text-neutral-800 dark:text-neutral-100 bg-neutral-50 dark:bg-neutral-900;
-  font-size: var(--size-step-1);
-  font-family: "NexaText";
-  line-height: 1.4;
-  letter-spacing: var(--tracking);
-}
+  body {
+    @apply bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-100;
+    font-size: var(--size-step-1);
+    font-family: "NexaText", sans-serif;
+    line-height: 1.4;
+    letter-spacing: var(--tracking);
+  }
 
-:focus {
-  outline-offset: .3ch;
-}
+  :focus {
+    outline-offset: 0.3ch;
+  }
 
-:target {
-  scroll-margin-top: 2ex;
-}
+  :target {
+    scroll-margin-top: 2ex;
+  }
 
-main:focus {
-  outline: none;
-}
+  main:focus {
+    outline: none;
+  }
 
-/* Headings */
-h1,
-h2,
-h3 {
-  line-height: 1;
-  letter-spacing: var(--tracking);
-  max-width: 20ch;
-}
+  /* Headings */
+  h1,
+  h2,
+  h3 {
+    line-height: 1;
+    letter-spacing: var(--tracking);
+    max-width: 20ch;
+  }
 
-h1 {
-  font-size: var(--size-step-5);
-}
+  h1 {
+    font-size: var(--size-step-5);
+  }
 
-h2 {
-  font-size: var(--size-step-4);
-}
+  h2 {
+    font-size: var(--size-step-4);
+  }
 
-h3 {
-  font-size: var(--size-step-3);
-}
+  h3 {
+    font-size: var(--size-step-3);
+  }
 
-/* Text Elements */
-p,
-li,
-blockquote:not([class]) {
-  max-width: 50ch;
-}
+  /* Text Elements */
+  p,
+  li,
+  blockquote:not([class]) {
+    max-width: 50ch;
+  }
 
-blockquote:not([class]) {
-  font-family: var(--font-serif);
-  font-size: var(--size-step-2);
-}
+  blockquote:not([class]) {
+    font-family: var(--font-serif);
+    font-size: var(--size-step-2);
+  }
 
-blockquote:not([class]) p:last-of-type {
-  font-family: var(--font-base);
-  font-size: var(--size-step-1);
-  font-weight: 400;
-}
+  blockquote:not([class]) p:last-of-type {
+    font-family: var(--font-base);
+    font-size: var(--size-step-1);
+    font-weight: 400;
+  }
 
-/* Alignment */
-body>* {
-  @apply items-center;
-}
+  /* Alignment */
+  body > * {
+    @apply items-center;
+  }
 
-/* SVG */
-svg {
-  flex: none;
-  height: 2ex;
-  width: auto;
-}
+  /* SVG */
+  svg {
+    flex: none;
+    height: 2ex;
+    width: auto;
+  }
 
-[role=list] {
-  padding: 0;
-}
+  [role="list"] {
+    padding: 0;
+  }
 
-/* Links */
-a {
-  color: currentcolor;
-}
+  /* Links */
+  a {
+    color: currentcolor;
+  }
 
-a:hover {
-  text-decoration: none;
-}
+  a:hover {
+    text-decoration: none;
+  }
 
-/* Selection */
-::selection {
-  background: var(--color-dark);
-  color: var(--color-light);
-}
+  /* Selection */
+  ::selection {
+    background: var(--color-dark);
+    color: var(--color-light);
+  }
 
-/* Active Class */
-.active-class {
-  @apply border-b-4 border-solid border-sky-500 pb-1 dark:border-pink-600;
-}
+  /* Active Class */
+  .active-class {
+    @apply border-l-4 pl-4 border-solid border-sky-500 dark:border-pink-600;
+  }
 
-/* Dotted Outline */
-.dotted-outline {
-  @apply border-2 border-dotted border-red-600;
-}
+  /* Dotted Outline */
+  .dotted-outline {
+    @apply border-2 border-dotted border-red-600;
+  }
 
   /* Blog post / latest news styling */
-  /* article .post-container h1,
-  article .post-container h2,
-  article .post-container h3,
-  article .post-container h4,
-  article .post-container h5,
-  article .post-container h6 {
-    @apply font-bold;
-  } */
   .article-header-headline {
-    @apply uppercase text-xs opacity-50 tracking-widest border-b border-black/10 dark:border-white/10 pb-6;
+    @apply border-b border-black/10 pb-6 text-xs uppercase tracking-widest opacity-50 dark:border-white/10;
   }
 
   article .post-container h1 {
@@ -279,7 +270,7 @@ a:hover {
   }
 
   article .post-container h2 {
-    @apply pt-3 pb-4 text-2xl;
+    @apply pb-4 pt-3 text-2xl;
   }
 
   article .post-container h3 {
@@ -309,18 +300,16 @@ a:hover {
 
   article .post-container blockquote {
     @apply border-l-4 border-solid border-gray-300 dark:border-gray-600;
-    @apply pl-4 pr-4 pb-4;
+    @apply pb-4 pl-4 pr-4;
     @apply text-lg;
   }
 
   article .post-container .post-content p:first-child {
     @apply font-bold;
   }
-
   /*
 
-
-  /* Text color */
+/* Text color */
   .default-text-color {
     color: var(--text-neutral-dark);
     @apply dark:text-stone-100;
@@ -369,10 +358,10 @@ a:hover {
   }
 
   /*
-  ==========================|==========================
-                        navigation
-  ==========================|==========================
-  */
+==========================|==========================
+                      navigation
+==========================|==========================
+*/
   .navigation-unordered_list-large {
     @apply flex flex-row items-center justify-center gap-x-8;
   }
@@ -386,34 +375,33 @@ a:hover {
   }
 
   .navigation-unordered_list-item_text_link-large {
-    @apply default-text-color font-semibold uppercase tracking-widest lg:text-lg;
+    @apply font-semibold uppercase tracking-widest lg:text-lg;
   }
 
   .navigation-unordered_list-small {
-    @apply mx-auto flex w-3/4 flex-col gap-y-2 divide-y divide-dashed divide-stone-600/70 rounded-xl bg-stone-800 bg-gradient-to-br from-neutral-900/80 to-neutral-900/40 border border-white/10 px-2 sm:px-16 py-4 sm:py-12 shadow-xl shadow-neutral-900 sm:max-w-sm;
-
+    @apply mx-auto flex w-3/4 flex-col gap-y-2 divide-y divide-dashed divide-stone-600/70 rounded-lg border border-white/10 bg-stone-50 bg-gradient-to-br from-stone-100/80 to-stone-100/40 px-2 py-4 shadow-xl shadow-stone-500 sm:max-w-sm sm:px-16 sm:py-12;
   }
 
   .navigation-unordered_list-item-small {
-    @apply flex flex-row items-center justify-start gap-x-3 px-4 pt-2;
+    @apply flex flex-row justify-start gap-x-3 px-4 pt-2;
   }
 
-  .navigation-unordered_list-item_icon-small {
-    @apply h-10 w-10 shrink-0 grow-0;
-  }
+  /* .navigation-unordered_list-item_icon-small {
+  @apply h-10 w-10 shrink-0 grow-0;
+} */
 
   .navigation-unordered_list-item_text_link-small {
-    @apply text-lg font-bold uppercase tracking-wider text-stone-50 shadow-lg;
+    @apply text-lg font-bold uppercase tracking-wider text-stone-700;
   }
 
-/*
+  /*
   ==========================|==========================
                       Text styling
   ==========================|==========================
   */
   /* Smaller, lighter, uppercase, bolder  */
   .caps-header {
-    @apply block py-12 px-8 text-center text-lg uppercase tracking-[0.5rem] text-violet-900 dark:text-violet-100;
+    @apply block px-8 py-12 text-center text-lg uppercase tracking-[0.5rem] text-violet-900 dark:text-violet-100;
   }
 
   .slub {
@@ -421,11 +409,11 @@ a:hover {
   }
 
   .basic-body {
-    @apply text-2xl md:text-xl opacity-70;
+    @apply text-2xl opacity-70 md:text-xl;
   }
 
   .main-service-icon-container {
-    @apply flex h-48 w-48 shrink-0 items-center justify-center self-start sm:self-center overflow-visible drop-shadow-md;
+    @apply flex h-48 w-48 shrink-0 items-center justify-center self-start overflow-visible drop-shadow-md sm:self-center;
   }
 
   .basic-subhead {
@@ -438,14 +426,14 @@ a:hover {
   ==========================|==========================
   */
   .card-basic-styling {
-    @apply bg-gradient-to-tr from-slate-200/80 to-white/80 dark:from-fuchsia-800/70 dark:to-black/70 border border-sky-200 dark:border-fuchsia-900 rounded-lg shadow-lg shadow-slate-500 dark:shadow-stone-700;
+    @apply rounded-lg border border-sky-200 bg-gradient-to-tr from-slate-200/80 to-white/80 shadow-lg shadow-slate-500 dark:border-fuchsia-900 dark:from-fuchsia-800/70 dark:to-black/70 dark:shadow-stone-700;
   }
 
   .card-header-banner-styling {
-    @apply border-b border-sky-300 dark:border-fuchsia-900 bg-gradient-to-b from-sky-100 to-sky-200 dark:from-fuchsia-700 dark:to-fuchsia-800 rounded-t-lg shadow-md text-sky-800 dark:text-fuchsia-100;
+    @apply rounded-t-lg border-b border-sky-300 bg-gradient-to-b from-sky-100 to-sky-200 text-sky-800 shadow-md dark:border-fuchsia-900 dark:from-fuchsia-700 dark:to-fuchsia-800 dark:text-fuchsia-100;
   }
   .card-price-styling {
-    @apply pt-8 font-chinook drop-shadow-md text-7xl;
+    @apply pt-8 font-chinook text-7xl drop-shadow-md;
   }
 
   .card-price-colour-blue {
@@ -461,19 +449,19 @@ a:hover {
   }
 
   .card-bullet-styling {
-    @apply flex shrink-0 items-center justify-center overflow-hidden h-6 w-6 mr-4 p-1 rounded-full ring-offset-2 ring-2
+    @apply mr-4 flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full p-1 ring-2 ring-offset-2;
   }
 
   .card-bullet-colour-yellow {
-    @apply bg-gradient-to-br from-amber-300 to-amber-400 dark:from-amber-300 dark:to-amber-400 shadow-inner shadow-amber-600/20 dark:shadow-amber-600 ring-amber-200 dark:ring-amber-100;
+    @apply bg-gradient-to-br from-amber-300 to-amber-400 shadow-inner shadow-amber-600/20 ring-amber-200 dark:from-amber-300 dark:to-amber-400 dark:shadow-amber-600 dark:ring-amber-100;
   }
 
   .card-bullet-colour-blue {
-    @apply bg-sky-300 dark:bg-sky-400 shadow-inner shadow-sky-600/20 dark:shadow-sky-600 ring-sky-200 dark:ring-sky-300;
+    @apply bg-sky-300 shadow-inner shadow-sky-600/20 ring-sky-200 dark:bg-sky-400 dark:shadow-sky-600 dark:ring-sky-300;
   }
 
   .card-bullet-colour-green {
-    @apply bg-green-400 dark:bg-green-400 shadow-inner shadow-green-600/20 dark:shadow-green-600 ring-green-200 dark:ring-green-300;
+    @apply bg-green-400 shadow-inner shadow-green-600/20 ring-green-200 dark:bg-green-400 dark:shadow-green-600 dark:ring-green-300;
   }
 
   .card-list-item-styling {
@@ -481,18 +469,18 @@ a:hover {
   }
 
   .card-list-item-colour-yellow {
-    @apply text-orange-600 dark:text-amber-300
+    @apply text-orange-600 dark:text-amber-300;
   }
 
   .card-list-item-colour-blue {
-    @apply text-sky-800 dark:text-sky-200
+    @apply text-sky-800 dark:text-sky-200;
   }
 
   .card-list-item-colour-green {
-    @apply text-emerald-800 dark:text-emerald-200
+    @apply text-emerald-800 dark:text-emerald-200;
   }
 
-        /*
+  /*
   ==========================|==========================
                     Special type styles
   ==========================|==========================
@@ -547,7 +535,7 @@ a:hover {
     margin: 0 0 16px 0;
   }
 
-        .article p {
+  .article p {
     font-size: 1.4rem;
     line-height: 2rem;
     margin: 16px 0;
@@ -569,7 +557,7 @@ a:hover {
   }
 
   .headline-title {
-    @apply mx-auto max-w-4xl pb-4 text-6xl sm:text-7xl md:text-6xl lg:text-6xl font-semibold text-stone-900 dark:text-stone-300;
+    @apply mx-auto max-w-4xl pb-4 text-6xl font-semibold text-stone-900 dark:text-stone-300 sm:text-7xl md:text-6xl lg:text-6xl;
   }
 
   .headline-paragraph {
@@ -580,28 +568,34 @@ a:hover {
     @apply mb-2 font-maven text-lg font-medium leading-tight text-stone-700 dark:text-stone-300 sm:text-xl md:text-2xl;
   }
 
-        /*
+  /*
                 ==========================|==========================
                               Clip-paths for between divs
                 ==========================|==========================
                 */
-        .slanted-top {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
-        }
+  .slanted-top {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+  }
 
-        .slanted-bottom {
-          clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
-          margin-top: -40px;
-        }
+  .slanted-bottom {
+    clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+    margin-top: -40px;
+  }
 
-        .arrow-top {
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
-        }
+  .arrow-top {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 50px),
+      50% 100%,
+      0 calc(100% - 50px)
+    );
+  }
 
-        .arrow-bottom {
-          clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
-          margin-top: -40px;
-        }
+  .arrow-bottom {
+    clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+  }
 
   /*
   ==========================|==========================
@@ -609,11 +603,11 @@ a:hover {
   ==========================|==========================
   */
   .buttonDefaults {
-    @apply rounded-md py-4 tracking-wide shadow-md shadow-neutral-900/20 md:px-2 text-3xl lg:text-xl bg-gradient-to-b from-white/50 to-neutral-900/10;
+    @apply rounded-md bg-gradient-to-b from-white/50 to-neutral-900/10 py-4 text-3xl tracking-wide shadow-md shadow-neutral-900/20 md:px-2 lg:text-xl;
   }
 
   .buttonDefaults:hover {
-    @apply scale-105 transform transition-transform bg-gradient-to-t;
+    @apply scale-105 transform bg-gradient-to-t transition-transform;
   }
 
   .buttonCTA {
@@ -692,7 +686,7 @@ a:hover {
   }
 
   .imgCaption {
-    @apply mt-4 mb-16 border-t pt-4 text-center font-caption uppercase tracking-widest text-stone-500 dark:border-stone-700;
+    @apply mb-16 mt-4 border-t pt-4 text-center font-caption uppercase tracking-widest text-stone-500 dark:border-stone-700;
   }
 
   /*
@@ -701,105 +695,129 @@ a:hover {
     ==========================|==========================
     */
 
-        .ligatures {
-          font-variant-ligatures: discretionary-ligatures;
-        }
+  .ligatures {
+    font-variant-ligatures: discretionary-ligatures;
+  }
 
-    @font-face {
-      font-family: "Chinook";
-      src: url("../css/typography/chinook-regular.woff2") format("woff2"), url("../css/typography/chinook-regular.woff") format("woff"), local("Chinook");
-      font-display: swap;
+  @font-face {
+    font-family: "Chinook";
+    src: url("../css/typography/chinook-regular.woff2") format("woff2"),
+      url("../css/typography/chinook-regular.woff") format("woff"),
+      local("Chinook");
+    font-display: swap;
     /* block - Gives the font face a short block period and an infinite swap period
                                                                                 https: //developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display#values */
     font-display: block;
-    }
-
-        @font-face {
-    font-family: "NexaText";
-      src: url("../css/typography/nexa-text-regular.woff2") format("woff2"), url("../css/typography/nexa-text-regular.woff") format("woff"), local("Nexa-Text-Regular"), local("Nexa Text Regular");
-      font-weight: 400;
-      font-display: block;
-    }
+  }
 
   @font-face {
     font-family: "NexaText";
-      src: url("../css/typography/nexa-text-regular-italic.woff2") format("woff2"), url("../css/typography/nexa-text-regular-italic.woff") format("woff"), local("Nexa-Text-Regular-Italic"), local("Nexa Text Regular Italic");
-      font-weight: 400;
+    src: url("../css/typography/nexa-text-regular.woff2") format("woff2"),
+      url("../css/typography/nexa-text-regular.woff") format("woff"),
+      local("Nexa-Text-Regular"), local("Nexa Text Regular");
+    font-weight: 400;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: "NexaText";
+    src: url("../css/typography/nexa-text-regular-italic.woff2") format("woff2"),
+      url("../css/typography/nexa-text-regular-italic.woff") format("woff"),
+      local("Nexa-Text-Regular-Italic"), local("Nexa Text Regular Italic");
+    font-weight: 400;
     font-display: block;
     font-style: italic;
 
     @font-face {
       font-family: "NexaText";
-        src: url("../css/typography/nexa-text-bold.woff2") format("woff2"), url("../css/typography/nexa-text-bold.woff") format("woff"), local("Nexa-Text-Bold"), local("Nexa Text Bold");
-        font-weight: 700;
-        font-display: block;
-      }
+      src: url("../css/typography/nexa-text-bold.woff2") format("woff2"),
+        url("../css/typography/nexa-text-bold.woff") format("woff"),
+        local("Nexa-Text-Bold"), local("Nexa Text Bold");
+      font-weight: 700;
+      font-display: block;
+    }
 
-                @font-face {
+    @font-face {
       font-family: "NexaText";
-        src: url("../css/typography/nexa-text-bold-italic.woff2") format("woff2"), url("../css/typography/nexa-text-bold-italic.woff") format("woff"), local("Nexa-Text-Bold-Italic"), local("Nexa Text Bold Italic");
-        font-weight: 700;
-        font-display: block;
+      src: url("../css/typography/nexa-text-bold-italic.woff2") format("woff2"),
+        url("../css/typography/nexa-text-bold-italic.woff") format("woff"),
+        local("Nexa-Text-Bold-Italic"), local("Nexa Text Bold Italic");
+      font-weight: 700;
+      font-display: block;
       font-style: italic;
 
       @font-face {
         font-family: "NexaText";
-          src: url("../css/typography/nexa-text-extra-bold.woff2") format("woff2"), url("../css/typography/nexa-text-extra-bold.woff") format("woff"), local("Nexa-Text-Extra-Bold"), local("Nexa Text Extra Bold");
+        src: url("../css/typography/nexa-text-extra-bold.woff2") format("woff2"),
+          url("../css/typography/nexa-text-extra-bold.woff") format("woff"),
+          local("Nexa-Text-Extra-Bold"), local("Nexa Text Extra Bold");
+        font-weight: 800;
+        font-display: block;
+        @font-face {
+          font-family: "NexaText";
+          src: url("../css/typography/nexa-text-extra-bold-italic.woff2")
+              format("woff2"),
+            url("../css/typography/nexa-text-extra-bold-italic.woff")
+              format("woff"),
+            local("Nexa-Text-Extra-Bold-Italic"),
+            local("Nexa Text Extra Bold Italic");
           font-weight: 800;
           font-display: block;
-@font-face {
-    font-family: "NexaText";
-    src: url("../css/typography/nexa-text-extra-bold-italic.woff2") format("woff2"), url("../css/typography/nexa-text-extra-bold-italic.woff") format("woff"), local("Nexa-Text-Extra-Bold-Italic"), local("Nexa Text Extra Bold Italic");
-    font-weight: 800;
-    font-display: block;
-    font-style: italic;
+          font-style: italic;
 
           @font-face {
             font-family: "NexaText";
-              src: url("../css/typography/nexa-text-black.woff2") format("woff2"), url("../css/typography/nexa-text-black.woff") format("woff"), local("Nexa-Text-Black"), local("Nexa Text Extra Black");
-              font-weight: 900;
-              font-display: block;
-            }
+            src: url("../css/typography/nexa-text-black.woff2") format("woff2"),
+              url("../css/typography/nexa-text-black.woff") format("woff"),
+              local("Nexa-Text-Black"), local("Nexa Text Extra Black");
+            font-weight: 900;
+            font-display: block;
+          }
 
-                                        @font-face {
+          @font-face {
             font-family: "NexaText";
-              src: url("../css/typography/nexa-text-black-italic.woff2") format("woff2"), url("../css/typography/nexa-text-black-italic.woff") format("woff"), local("Nexa-Text-Black-Italic"), local("Nexa Text Extra Black Italic");
-              font-weight: 900;
-              font-display: block;
-              font-style: italic;
+            src: url("../css/typography/nexa-text-black-italic.woff2")
+                format("woff2"),
+              url("../css/typography/nexa-text-black-italic.woff")
+                format("woff"),
+              local("Nexa-Text-Black-Italic"),
+              local("Nexa Text Extra Black Italic");
+            font-weight: 900;
+            font-display: block;
+            font-style: italic;
+          }
+
+          /* Optician Sans */
+          @font-face {
+            font-family: OpticianSans;
+            font-weight: 400;
+            src: url("./typography/optician-sans.woff2") format("woff2"),
+              url("./typography/optician-sans.woff") format("woff");
+            font-display: swap;
+          }
+        }
+
+        /* CustomCSS */
+        @layer utilities {
+          .animation-delay-2000 {
+            animation-delay: 2s;
+          }
+
+          .animation-delay-4000 {
+            animation-delay: 4s;
+          }
+
+          .above-the-fold {
+            font-family: "NexaText", sans-serif;
+          }
+
+          @supports (font-variation-settings: normal) {
+            .above-the-fold {
+              font-family: "NexaText", sans-serif;
             }
-
-                                        /* Optician Sans */
-                                        @font-face {
-                                          font-family: OpticianSans;
-                                          font-weight: 400;
-                                          src: url("./typography/optician-sans.woff2") format("woff2"),
-                                            url("./typography/optician-sans.woff") format("woff");
-                                          font-display: swap;
-                                        }
-                                        }
-
-                                /* CustomCSS */
-                                @layer utilities {
-                                  .animation-delay-2000 {
-                                    animation-delay: 2s;
-                                  }
-
-                                        .animation-delay-4000 {
-                                          animation-delay: 4s;
-                                        }
-
-                                        .above-the-fold {
-            font-family: "NexaText";
-            }
-
-                                        @supports (font-variation-settings: normal) {
-                                          .above-the-fold {
-              font-family: "NexaText";
-              }
-              }
-              }
-              }
+          }
+        }
+      }
     }
   }
 }
