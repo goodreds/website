@@ -10,7 +10,7 @@
 
 # Configure the Netlify plugin to inline environment variables in functions
 [[plugins]]
-  # package = "netlify-plugin-inline-functions-env"
-  # # Configure the plugin inputs to include the CONTEXT environment variable
-  # [plugins.inputs]
-  #   include = ["CONTEXT"]
+  package = "netlify-plugin-inline-functions-env"
+  # Configure the plugin inputs to include the CONTEXT environment variable
+  [plugins.inputs]
+    include = ["CONTEXT"]
