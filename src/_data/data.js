@@ -16,8 +16,10 @@ module.exports = {
         profImageLight: "v1653539547/goodreds-netlify/hero/light",
         profImageDark: "v1653539547/goodreds-netlify/hero/dark",
         // https://res.cloudinary.com/goodreds/image/upload/v1670983800/goodreds-netlify/hero/beach-light.webp
-        cloudinaryUrlRoot: "https://res.cloudinary.com/goodreds/image/upload/",
-        cloudinaryUrlBranch: "/v1670983800/goodreds-netlify/hero/beach",
+        // https://res.cloudinary.com/dtawbjcv6/image/upload/v1681887696/ameen-fahmy-7RZj4IrPT9Y-unsplash_x6uuu3.webp
+        cloudinaryUrlRoot: "https://res.cloudinary.com/dtawbjcv6/image/upload/",
+        cloudinaryUrlBranch: "/v1681887696/ameen-fahmy-7RZj4IrPT9Y-unsplash_x6uuu3",
+        cloudinaryImageAlt: "Beach",
         cloudinaryUrlApiDefault: "c_fill,g_auto,w_639,h_852,q_auto",
         cloudinaryUrlApiSm: "c_fill,g_auto,w_767,h_1023,q_auto",
         cloudinaryUrlApiMd: "c_fill,g_auto,w_1023,h_1023,q_auto",

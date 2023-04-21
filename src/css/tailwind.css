@@ -186,7 +186,7 @@
   h3 {
     line-height: 1;
     letter-spacing: var(--tracking);
-    max-width: 20ch;
+    max-width: 48ch;
   }
 
   h1 {
@@ -205,7 +205,7 @@
   p,
   li,
   blockquote:not([class]) {
-    max-width: 50ch;
+    max-width: 55ch;
   }
 
   blockquote:not([class]) {
@@ -252,7 +252,7 @@
 
   /* Active Class */
   .active-class {
-    @apply border-l-4 pl-4 border-solid border-sky-500 dark:border-pink-600;
+    @apply border-l-4 pl-4 lg:border-l-0 lg:pl-0 lg:pb-1 lg:border-b-4 border-solid border-sky-500 dark:border-pink-600;
   }
 
   /* Dotted Outline */
@@ -346,7 +346,7 @@
 
   /* Flex centering classes */
   .flex-center-outer {
-    @apply h-fit items-center justify-center;
+    @apply flex h-fit items-center justify-center;
   }
 
   .flex-center-inner {
@@ -375,7 +375,7 @@
   }
 
   .navigation-unordered_list-item_text_link-large {
-    @apply font-semibold uppercase tracking-widest lg:text-lg;
+    @apply font-semibold capitalize tracking-widest lg:text-sm text-stone-950 dark:text-stone-50;
   }
 
   .navigation-unordered_list-small {
@@ -391,7 +391,7 @@
 } */
 
   .navigation-unordered_list-item_text_link-small {
-    @apply text-lg font-bold uppercase tracking-wider text-stone-700;
+    @apply text-lg font-bold capitalize tracking-wider text-stone-700;
   }
 
   /*
@@ -405,7 +405,7 @@
   }
 
   .slub {
-    @apply text-sm font-bold uppercase tracking-[0.3rem] text-stone-700 dark:text-stone-200;
+    @apply text-sm font-bold capitalize tracking-[0.3rem] text-stone-700 dark:text-stone-200;
   }
 
   .basic-body {
