@@ -109,6 +109,9 @@ module.exports = function (eleventyConfig) {
     showVersion: false,
   });
 
+  // Add delay before reloading the page - this stops the reload from serving up an incomplete page
+  eleventyConfig.setWatchThrottleWaitTime(500); // in milliseconds
+
   // Set input/output directories and template formats
   return {
     dir: {

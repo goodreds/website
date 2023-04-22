@@ -111,7 +111,7 @@
   /* ==========================|==========================Sensible defaults
     Can include text-color, background-color, border-color
     Variations could include inv, contrast
-    Also could include primary color, secondary color, tertiary/quaternary color
+    Also could include primary color, secondary color, tertiary/quaternary color - don't forget to include a neutral color and remeber the correct proportions to use of primary, secondary and tertiary colours.
 
     Set up some sensible design tokens to allow us to set up a solid foundation for a consistent user interface
     /* -------------------- | ----------------------- */
@@ -190,15 +190,15 @@
   }
 
   h1 {
-    font-size: var(--size-step-5);
+    font-size: var(--size-step-3);
   }
 
   h2 {
-    font-size: var(--size-step-4);
+    font-size: var(--size-step-2);
   }
 
   h3 {
-    font-size: var(--size-step-3);
+    font-size: var(--size-step-1);
   }
 
   /* Text Elements */
@@ -206,6 +206,7 @@
   li,
   blockquote:not([class]) {
     max-width: 55ch;
+    font-size: var(--size-step-0);
   }
 
   blockquote:not([class]) {
@@ -308,6 +309,11 @@
     @apply font-bold;
   }
   /*
+
+/* Default heading padding */
+h1, h2, h3 {
+  @apply pb-4;
+}
 
 /* Text color */
   .default-text-color {
