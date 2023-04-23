@@ -158,7 +158,11 @@
 
   /* Temporary development server rules */
   .blueprint > div {
-    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200 bg-opacity-25;
+    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200 dark:bg-sky-800 bg-opacity-25;
+  }
+
+  .border-blueprint {
+    @apply border border-dashed border-sky-400 border-opacity-25;
   }
 
   /* Global Styles */
@@ -417,7 +421,7 @@ h1, h2, h3 {
   }
 
   .slub {
-    @apply text-sm font-bold capitalize tracking-[0.3rem] text-stone-700 dark:text-stone-200;
+    @apply text-sm font-bold uppercase tracking-[0.3rem] text-stone-700 dark:text-stone-200;
   }
 
   .basic-body {
