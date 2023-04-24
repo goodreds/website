@@ -46,6 +46,7 @@ module.exports = {
       maven: "'Maven Pro', sans-serif",
       chinook: "'Chinook', cursive",
       sans: [
+        "Inter",
         "NexaText",
         "ui-sans-serif",
         "system-ui",
