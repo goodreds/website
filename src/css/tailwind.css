@@ -263,7 +263,7 @@
 
   /* Active Class */
   .active-class {
-    @apply border-l-4 pl-4 lg:border-l-0 lg:pl-0 lg:pb-1 lg:border-b-4 border-solid border-sky-500 dark:border-pink-600;
+    @apply text-sky-400 dark:text-pink-600;
   }
 
   /* Dotted Outline */
@@ -395,7 +395,7 @@ h1, h2, h3 {
   }
 
   .navigation-unordered_list-small {
-    @apply mx-auto flex w-3/4 flex-col gap-y-2 divide-y divide-dashed divide-stone-600/70 rounded-lg border border-white/10 bg-stone-50 bg-gradient-to-br from-stone-100/80 to-stone-100/40 px-2 py-4 shadow-xl shadow-stone-500 sm:max-w-sm sm:px-16 sm:py-12;
+    @apply mx-auto flex flex-col gap-y-2 divide-y divide-dashed divide-stone-600/70 rounded-lg border border-white/10 bg-stone-50 bg-gradient-to-br from-stone-100/80 to-stone-100/40 px-16 py-16 dark:shadow-none shadow-xl shadow-stone-500 ;
   }
 
   .navigation-unordered_list-item-small {
