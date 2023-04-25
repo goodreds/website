@@ -158,7 +158,7 @@
 
   /* Temporary development server rules */
   .blueprint > div {
-    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200 dark:bg-sky-800 bg-opacity-25;
+    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200/10 dark:bg-sky-800/10 bg-opacity-25;
   }
 
   .border-blueprint {
