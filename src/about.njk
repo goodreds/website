@@ -9,63 +9,31 @@ eleventyNavigation:
 
 {# The layout to use #}
 {% extends "src/_includes/default.njk" %}
-{% block
-content %}
+
+  {% block content %}
+
   <!-- ==========================|========================== -->
-  <!--                         HERO                          -->
+  <!--                      HEADER_ABOUT                     -->
   <!-- ==========================|========================== -->
-    <div id="hero-container" class="w-full"> {% block hero %}
-      {% include '_components/hero-about.njk' %}
-    {% endblock %}
-  </div>
-  <!-- ==========================|========================== -->
-  <!--                         TEAMS                         -->
-  <!-- ==========================|========================== -->
-    {# {% block teams %}
-  {% include '_components/teams.njk' %}
-  {% endblock %} #}
-  <!-- ==========================|========================== -->
-  <!--                     OTHER SERVICES                    -->
-  <!-- ==========================|========================== -->
-    <div class="py-48 relative z-50">
-    {% block business_info_1 %}
-  {% include '_components/business_info_1.njk' %}
+
+  {% block header_about %}
+    {% include '_core/header_about.njk' %}
   {% endblock %}
-    {% block business_info_2 %}
-  {% include
-    '_components/business_info_2.njk' %}
+
+  <!-- ==========================|========================== -->
+  <!--                         ABOUT                         -->
+  <!-- ==========================|========================== -->
+
+  {% block about %}
+    {% include '_core/about.njk' %}
   {% endblock %}
-  </div>
+
   <!-- ==========================|========================== -->
-  <!--                     BUSINESS INFO                     -->
+  <!--                     TESTIMONIALS                      -->
   <!-- ==========================|========================== -->
-    {% block core_web_vitals %}
-  {% include '_components/core_web_vitals.njk' %}
+
+  {% block testimonials %}
+    {% include '_core/testimonials.njk' %}
   {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                  CONTINUED SERVICES                   -->
-  <!-- ==========================|========================== -->
-    {% block business_info_3 %}
-  {% include '_components/business_info_3.njk' %}
+
   {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                          FAQs                         -->
-  <!-- ==========================|========================== -->
-    {% block faqs %}
-  {% include '_components/faqs.njk' %}
-  {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                     CONTACT FORM                      -->
-  <!-- ==========================|========================== -->
-    {% block contact_form %}
-  {% include '_components/contact_form.njk' %}
-  {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                     PRICING                      -->
-  <!-- ==========================|========================== -->
-  <div class="mx-auto xl:max-w-7xl py-24">
-    {% block pricing %}
-  {% include '_components/pricing.njk' %}
-{% endblock %}
-</div>
-{% endblock %}

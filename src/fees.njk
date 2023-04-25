@@ -9,63 +9,37 @@ eleventyNavigation:
 
 {# The layout to use #}
 {% extends "src/_includes/default.njk" %}
-{% block
-content %}
+{% block content %}
   <!-- ==========================|========================== -->
-  <!--                         HERO                          -->
+  <!--                      HEADER_FEES                     -->
   <!-- ==========================|========================== -->
-    <div id="hero-container" class="w-full"> {% block hero %}
-      {% include '_components/hero-about.njk' %}
-    {% endblock %}
-  </div>
-  <!-- ==========================|========================== -->
-  <!--                         TEAMS                         -->
-  <!-- ==========================|========================== -->
-    {# {% block teams %}
-  {% include '_components/teams.njk' %}
-  {% endblock %} #}
-  <!-- ==========================|========================== -->
-  <!--                     OTHER SERVICES                    -->
-  <!-- ==========================|========================== -->
-    <div class="py-48 relative z-50">
-    {% block business_info_1 %}
-  {% include '_components/business_info_1.njk' %}
+
+  {% block header_fees %}
+    {% include '_core/header_fees.njk' %}
   {% endblock %}
-    {% block business_info_2 %}
-  {% include
-    '_components/business_info_2.njk' %}
+
+  <!-- ==========================|========================== -->
+  <!--                          FEES                         -->
+  <!-- ==========================|========================== -->
+
+  {% block fees %}
+    {% include '_core/fees.njk' %}
   {% endblock %}
-  </div>
+
   <!-- ==========================|========================== -->
-  <!--                     BUSINESS INFO                     -->
+  <!--                    PAYMENT OPTIONS                    -->
   <!-- ==========================|========================== -->
-    {% block core_web_vitals %}
-  {% include '_components/core_web_vitals.njk' %}
+
+  {% block payment_options %}
+    {% include '_core/payment_options.njk' %}
   {% endblock %}
+
   <!-- ==========================|========================== -->
-  <!--                  CONTINUED SERVICES                   -->
+  <!--                     TESTIMONIALS                      -->
   <!-- ==========================|========================== -->
-    {% block business_info_3 %}
-  {% include '_components/business_info_3.njk' %}
+
+  {% block testimonials %}
+    {% include '_core/testimonials.njk' %}
   {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                          FAQs                         -->
-  <!-- ==========================|========================== -->
-    {% block faqs %}
-  {% include '_components/faqs.njk' %}
-  {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                     CONTACT FORM                      -->
-  <!-- ==========================|========================== -->
-    {% block contact_form %}
-  {% include '_components/contact_form.njk' %}
-  {% endblock %}
-  <!-- ==========================|========================== -->
-  <!--                     PRICING                      -->
-  <!-- ==========================|========================== -->
-  <div class="mx-auto xl:max-w-7xl py-24">
-    {% block pricing %}
-  {% include '_components/pricing.njk' %}
-{% endblock %}
-</div>
+
 {% endblock %}
