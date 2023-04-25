@@ -39,12 +39,6 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      skillet: "'Skillet', cursive",
-      titan_one: "'TitanOne', sans-serif",
-      bungee_shade: "'Bungee Shade', cursive",
-      bungee_hairline: "'Bungee Hairline', cursive",
-      maven: "'Maven Pro', sans-serif",
-      chinook: "'Chinook', cursive",
       sans: [
         "Inter",
         "NexaText",
