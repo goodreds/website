@@ -158,11 +158,11 @@
 
   /* Temporary development server rules */
   .blueprint > div {
-    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200/10 dark:bg-sky-800/10 bg-opacity-25;
+    /* @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200/10 dark:bg-sky-800/10 bg-opacity-25; */
   }
 
   .border-blueprint {
-    @apply border border-dashed border-sky-400 border-opacity-25;
+    /* @apply border border-dashed border-sky-400 border-opacity-25; */
   }
 
   /* Global Styles */
@@ -210,11 +210,16 @@
   }
 
   h2 {
-    font-size: var(--size-step-2);
+    font-size: var(--size-step-3);
+    font-weight: 700;
   }
 
   h3 {
     font-size: var(--size-step-1);
+    font-weight: 700;
+  }
+  h4 {
+    font-weight: 700;
   }
 
   /* Text Elements */
