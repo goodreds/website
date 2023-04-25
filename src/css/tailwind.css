@@ -158,11 +158,11 @@
 
   /* Temporary development server rules */
   .blueprint > div {
-    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200 dark:bg-sky-800 bg-opacity-25;
+    /* @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200 dark:bg-sky-800 bg-opacity-25; */
   }
 
   .border-blueprint {
-    @apply border border-dashed border-sky-400 border-opacity-25;
+    /* @apply border border-dashed border-sky-400 border-opacity-25; */
   }
 
   /* Global Styles */
@@ -197,6 +197,12 @@
     line-height: 1;
     letter-spacing: var(--tracking);
     max-width: 48ch;
+  }
+
+  /* CSS text-wrap: balance; will evenly distribute your text on available lines. - https://twitter.com/wesbos/status/1648722862717521923
+  This has a limit of 4 lines of text for performance, so not that useful on the p element */
+  h1, h2, h3, h4, h5, h6, figcaption, blockquote, legend, caption {
+    text-wrap: balance;
   }
 
   h1 {

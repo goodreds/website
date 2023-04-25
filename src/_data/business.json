@@ -23,11 +23,11 @@
     "keyword5": ""
   },
   "socialGraph": {
-    "title": "Open graph title",
-    "type": "https://ogp.me/#types",
-    "image": "image URL",
-    "url": "permanent URL",
-    "secureUrl": "https version of URL"
+    "title": "MyHill Psychology DEVELOPMENT Server",
+    "type": "website",
+    "image": "https://myhill-psychology.netlify.app/_assets/_logos/myhill-logo-light-sm.svg",
+    "url": "http://myhill-psychology.netlify.app/",
+    "secureUrl": "https://myhill-psychology.netlify.app/"
   },
   "branding": {
     "primaryColor": "amber"
