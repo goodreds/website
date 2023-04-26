@@ -71,6 +71,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/_favicons/*": "/" });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/*.svg": "_assets/_icons" });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_images/*": "_assets/_images" });
+  eleventyConfig.addPassthroughCopy({ "./src/_assets/_images/_sections/*": "_assets/_images/_sections" });
+
   eleventyConfig.addPassthroughCopy({ "./src/news/images/*": "news/images" });
   eleventyConfig.addPassthroughCopy("./src/admin");
   eleventyConfig.addPassthroughCopy({ "_assets/*": "_assets/" });

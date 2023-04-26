@@ -78,6 +78,8 @@ module.exports = {
       backgroundColor: ["odd"],
       brightness: ["odd"],
       backgroundImage: {
+        "mistyHills": "url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash copy.webp')",
+
         // arrow background images
         "arrows-blue":
           "url('../_assets/_arrows/arrows-blue.svg')",

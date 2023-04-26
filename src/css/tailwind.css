@@ -164,6 +164,9 @@
     /* @apply border border-dashed border-sky-400 border-opacity-25; */
   }
 
+  .tester {
+    background: url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash copy.webp');
+  }
   /* Global Styles */
   html {
     visibility: hidden;
