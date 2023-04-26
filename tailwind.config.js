@@ -78,8 +78,11 @@ module.exports = {
       backgroundColor: ["odd"],
       brightness: ["odd"],
       backgroundImage: {
-        "mistyHills": "url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash copy.webp')",
-
+        "mistyHills": "url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp')",
+        "clouds": "url('../_assets/_images/_sections/diego-ph-BCuxVP5WEsU-unsplash.webp')",
+        "beach": "url('../_assets/_images/_sections/ameen-fahmy-7RZj4IrPT9Y-unsplash.webp')",
+        "snowcave": "url('../_assets/_images/_sections/pramod-tiwari-XD4MRtKWc0g-unsplash.webp')",
+        "sunrise": "url('../_assets/_images/_sections/sebastien-gabriel--IMlv9Jlb24-unsplash.webp')",
         // arrow background images
         "arrows-blue":
           "url('../_assets/_arrows/arrows-blue.svg')",

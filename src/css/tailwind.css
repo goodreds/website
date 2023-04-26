@@ -290,7 +290,7 @@
 
   /* Active Class */
   .active-class {
-    @apply text-sky-400 dark:text-pink-600;
+    @apply text-sky-500 dark:text-pink-700;
   }
 
   /* Dotted Outline */
@@ -353,7 +353,7 @@
   }
 
   .navigation-unordered_list-item_text_link-large {
-    @apply font-semibold capitalize tracking-widest text-stone-950 dark:text-stone-50 lg:text-sm;
+    @apply font-semibold capitalize tracking-widest text-stone-50 dark:text-stone-50 lg:text-base;
   }
 
   .navigation-unordered_list-small {
