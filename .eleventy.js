@@ -64,6 +64,8 @@ module.exports = function (eleventyConfig) {
     "./src/js/mask.js": "js/mask.js",
     "./src/js/filters.js": "js/filters.js",
     "./src/js/shortcodes.js": "js/shortcodes.js",
+    "./src/js/three.min.js": "js/three.min.js",
+    "./src/js/vanta.fog.min.js": "js/vanta.fog.min.js",
   });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_video/*.{webm,mp4,ogv}": "_assets/_video" });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/_favicons/*": "/" });
