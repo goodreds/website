@@ -70,6 +70,12 @@
   /* A elements that don't have a class get default styles */
   a:not([class]) {
     text-decoration-skip-ink: auto;
+    color: currentColor;
+    font-weight: 700;
+  }
+
+  a:hover:not([class]) {
+    text-decoration: underline;
   }
 
   /* Make images easier to work with */
@@ -217,7 +223,7 @@
   }
 
   h1 {
-    font-size: var(--size-step-3);
+    font-size: var(--size-step-4);
   }
 
   h2 {
@@ -226,10 +232,11 @@
   }
 
   h3 {
-    font-size: var(--size-step-1);
+    font-size: var(--size-step-2);
     font-weight: 700;
   }
   h4 {
+    font-size: var(--size-step-1);
     font-weight: 700;
   }
 
@@ -290,7 +297,7 @@
 
   /* Active Class */
   .active-class {
-    @apply text-sky-500 dark:text-pink-700;
+    @apply text-sky-500 dark:text-orange-500 border-b-2 pb-1 border-sky-500 dark:border-orange-500 font-bold;
   }
 
   /* Dotted Outline */
@@ -328,11 +335,15 @@
 
   /* Flex centering classes */
   .flex-center-outer {
-    @apply flex h-fit items-center justify-center;
+    @apply flex items-center justify-center;
   }
 
   .flex-center-inner {
     @apply items-center justify-center;
+  }
+
+  p + p {
+    @apply mb-4;
   }
 
   /*
@@ -353,7 +364,7 @@
   }
 
   .navigation-unordered_list-item_text_link-large {
-    @apply font-semibold capitalize tracking-widest text-stone-50 dark:text-stone-50 lg:text-base;
+    @apply capitalize tracking-widest text-stone-950 dark:text-stone-50 lg:text-base mix-blend-darken;
   }
 
   .navigation-unordered_list-small {
@@ -470,5 +481,27 @@
     .above-the-fold {
       font-family: "Inter", sans-serif;
     }
+  }
+
+  /* Animation that fades in the element after it has loaded */
+  .easeload{
+    opacity: 0;
+    -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    -ms-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    transition: all 5s ease;
+  }
+
+  /* support services available */
+  #services li {
+    @apply flex flex-row gap-4 bg-amber-100 border-4 border-amber-200 text-amber-950 rounded-xl p-4 items-center;
+  }
+  #services li h3 {
+    @apply font-bold text-xl pb-0;
+  }
+
+  #acknowledgement {
+    background: url("../_assets/_images/_sections/Mary_River_from_Dickabram_Bridge.webp") no-repeat center center/cover;
   }
 }

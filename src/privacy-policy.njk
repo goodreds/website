@@ -1,0 +1,45 @@
+---
+title: Privacy Policy
+description: This is the privacy policy page.
+eleventyNavigation:
+  key: privacy
+  order: 5
+  icon: nav-icon-pricing.svg
+---
+
+{# The layout to use #}
+{% extends "src/_includes/default.njk" %}
+{% block content %}
+  <!-- ==========================|========================== -->
+  <!--                      HEADER_FEES                      -->
+  <!-- ==========================|========================== -->
+
+  {% block header_fees %}
+    {% include '_core/header_privacy.njk' %}
+  {% endblock %}
+
+  <!-- ==========================|========================== -->
+  <!--                          FEES                         -->
+  <!-- ==========================|========================== -->
+
+  {% block fees %}
+    {% include '_core/privacy.njk' %}
+  {% endblock %}
+
+  <!-- ==========================|========================== -->
+  <!--                    PAYMENT OPTIONS                    -->
+  <!-- ==========================|========================== -->
+
+  {# {% block payment_options %}
+    {% include '_core/payment_options.njk' %}
+  {% endblock %} #}
+
+  <!-- ==========================|========================== -->
+  <!--                     TESTIMONIALS                      -->
+  <!-- ==========================|========================== -->
+
+  {% block testimonials %}
+    {% include '_core/acknowledgement.njk' %}
+  {% endblock %}
+
+{% endblock %}

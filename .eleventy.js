@@ -67,7 +67,7 @@ module.exports = function (eleventyConfig) {
     "./src/js/three.min.js": "js/three.min.js",
     "./src/js/vanta.fog.min.js": "js/vanta.fog.min.js",
   });
-  eleventyConfig.addPassthroughCopy({ "./src/_assets/_video/*.{webm,mp4,ogv}": "_assets/_video" });
+  eleventyConfig.addPassthroughCopy({ "./src/_assets/_video/*.{webm,mp4,ogv,mov}": "_assets/_video" });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/_favicons/*": "/" });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/*.svg": "_assets/_icons" });
   eleventyConfig.addPassthroughCopy({ "./src/_assets/_images/*": "_assets/_images" });

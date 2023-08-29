@@ -81,7 +81,7 @@ module.exports = {
         "mistyHills": "url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp')",
         "clouds": "url('../_assets/_images/_sections/diego-ph-BCuxVP5WEsU-unsplash.webp')",
         "beach": "url('../_assets/_images/_sections/ameen-fahmy-7RZj4IrPT9Y-unsplash.webp')",
-        "snowcave": "url('../_assets/_images/_sections/pramod-tiwari-XD4MRtKWc0g-unsplash.webp')",
+        "snowcave": "url('../_assets/_backgrounds/hex-light.svg')",
         "sunrise": "url('../_assets/_images/_sections/sebastien-gabriel--IMlv9Jlb24-unsplash.webp')",
         // arrow background images
         "arrows-blue":
