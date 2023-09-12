@@ -1,7 +1,7 @@
 <!-- ==========================|========================== -->
 <!--               LOGO & NAVIGATION FLEXBOX               -->
 <!-- ==========================|========================== -->
-  <div class="fixed left-0 right-0 z-40 backdrop-blur-sm drop-shadow-[0_35px_35px_rgba(0,0,0,0.05)] ring-1 ring-zinc-950/10 dark:ring-zinc-50/10">
+  <div class="fixed left-0 right-0 z-40 bg-zinc-100/80 dark:bg-zinc-900/80 backdrop-blur-sm drop-shadow-[0_35px_35px_rgba(0,0,0,0.05)] ring-1 ring-zinc-950/10 dark:ring-zinc-50/10">
     <div class="flex items-center mx-auto max-w-7xl lg:h-28 xl:h-28">
     <!-- ==========================|========================== -->
     <!--                          LOGO                         -->
@@ -66,7 +66,7 @@
           {% include '_components/nav_list_small.njk' %}
         {% endblock %}
       </div>
-      <div class="hidden lg:block">
+      <div class="hidden lg:block z-50">
         {% block nav_list_large %}
           {% include '_components/nav_list_large.njk' %}
         {% endblock %}

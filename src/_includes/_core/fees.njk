@@ -1,46 +1,59 @@
-<section class="blueprint border-blueprint bg-gradient-to-b from-stone-50 to-stone-100 dark:from-stone-950 dark:to-stone-900 flex-center-outer">
-    <div class="w-full max-w-7xl mx-4 my-12 flex flex-col flex-center-inner">
-      <h3>Fees, Rebates</h3>
-      <div class="justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div class="flex flex-col">
-          <h4 class="pt-4">Private Session</h4>
-          <div class="flex flex-row">
-            <img class="h-4 self-center pr-1 -mt-1" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment">
-            <p>50 minutes</p>
+<section class="blueprint border-blueprint bg-gradient-to-b from-stone-50 to-stone-100 dark:from-stone-950 dark:to-stone-900
+    flex-center-outer">
+  <div class="w-full max-w-7xl mx-4 py-24 flex flex-col flex-center-inner">
+    <div class="justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="appointment-card">
+        <h4 class="appointment-headline">
+          Private Session</h4>
+        <div class="appointment-below-the-line">
+          <img class="appointment-clock-icon" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment"/>
+          <p class="appointment-duration">50 minutes</p>
+          <div class="appointment-details">
+            <p class="appointment-price">$220</p>
           </div>
-          <p>$220</p>
         </div>
-        <div class="flex flex-col">
-          <h4 class="pt-4">GP Mental Health Care Plan</h4>
-          <div class="flex flex-row">
-            <img class="h-4 self-center pr-1 -mt-1" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment">
-            <p>50 minutes</p>
+      </div>
+      <div class="appointment-card">
+        <h4 class="appointment-headline">GP Mental Health Care Plan</h4>
+        <div class="appointment-below-the-line">
+          <img class="appointment-clock-icon" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment"/>
+          <p class="appointment-duration">50 minutes</p>
+          <div class="appointment-details">
+            <p class="appointment-price">$220</p>
+            <p class="appointment-small-print">less Medicare Rebate of $88.25</p>
           </div>
-          <p>$220 less Medicare Rebate of $88.25</p>
-          <p></p>
         </div>
-        <div class="flex flex-col">
-          <h4 class="pt-4">NDIS Self-Managed or Plan-Managed Participants</h4>
-          <div class="flex flex-row">
-            <img class="h-4 self-center pr-1 -mt-1" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment">
-            <p>50 minutes</p>
+      </div>
+      <div class="appointment-card">
+        <h4 class="appointment-headline">NDIS Self-Managed or Plan-Managed Participants</h4>
+        <div class="appointment-below-the-line">
+          <img class="appointment-clock-icon" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment">
+          <p class="appointment-duration">50 minutes</p>
+          <div class="appointment-details">
+            <p class="appointment-price">$220</p>
+            <p class="appointment-small-print">(travel allowance to be discussed if service required in home)</p>
           </div>
-          <p>$220 (travel allowance to be discussed if service required in home)</p>
         </div>
-        <div class="flex flex-col">
-          <h4 class="pt-4">Supervision funded by Service</h4>
-          <div class="flex flex-row">
-            <img class="h-4 self-center pr-1 -mt-1" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment">
+      </div>
+      <div class="appointment-card">
+        <h4 class="appointment-headline">Supervision funded by Service</h4>
+        <div class="appointment-below-the-line">
+          {# <img class="appointment-clock-icon" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment"> #}
+          <div class="appointment-details">
+            <p class="appointment-price">$190</p>
+            <p class="appointment-small-print">(+10% GST)</p>
           </div>
-          <p>$190 (+10% GST)</p>
         </div>
-        <div class="flex flex-col">
-          <h4 class="pt-4">Consulting and report writing fees</h4>
-          <div class="flex flex-row">
-            <img class="h-4 self-center pr-1 -mt-1" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment">
+      </div>
+      <div class="appointment-card">
+        <h4 class="appointment-headline">Consulting and report writing fees</h4>
+        <div class="appointment-below-the-line">
+          {# <img class="appointment-clock-icon" src="../../_assets/_icons/_time/clock.svg" alt="Duration of appointment"> #}
+          <div class="appointment-details">
+            <p class="appointment-price">Request quote via email</p>
           </div>
-          <p>Request quote via email</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

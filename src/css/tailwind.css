@@ -364,7 +364,7 @@
   }
 
   .navigation-unordered_list-item_text_link-large {
-    @apply capitalize tracking-widest text-stone-950 dark:text-stone-50 lg:text-base mix-blend-darken;
+    @apply capitalize tracking-widest text-stone-950 dark:text-stone-50 lg:text-base;
   }
 
   .navigation-unordered_list-small {
@@ -503,5 +503,67 @@
 
   #acknowledgement {
     background: url("../_assets/_images/_sections/Mary_River_from_Dickabram_Bridge.webp") no-repeat center center/cover;
+  }
+
+  .lines-either-side {
+    @apply grid grid-cols-[1fr_auto_1fr] font-light tracking-widest text-zinc-950/50 gap-5 items-center uppercase grow before:bg-zinc-950/10 before:h-[1px] after:bg-zinc-950/10 after:h-[1px] dark:text-zinc-50/40 dark:before:bg-zinc-50/10 dark:after:bg-zinc-50/10;
+  }
+
+  .qualy {
+
+  }
+
+  .qualy>li {
+    text-align: center;
+    text-wrap: balance;
+    @apply max-w-sm mx-auto py-2;
+  }
+
+  .header-container {
+    @apply md:w-2/5 py-12 opacity-60 dark:opacity-80;
+  }
+
+  .header-title {
+    @apply text-slate-800 dark:text-slate-100 font-thin text-7xl border-b border-zinc-950/20 dark:border-zinc-50/50 pb-12 mb-4;
+  }
+
+  .header-subtitle {
+    @apply text-slate-800 dark:text-slate-100 font-thin text-2xl;
+  }
+
+  .appointment-card {
+    @apply flex flex-col p-4 bg-slate-200/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
+  }
+
+  .appointment-headline {
+    @apply grid text-2xl font-light tracking-wide text-zinc-950/50 uppercase after:bg-zinc-950/10 after:h-[1px] after:mt-3 dark:text-zinc-50/80 dark:after:bg-zinc-50/50;
+  }
+
+  .appointment-below-the-line {
+    @apply flex flex-row pt-3;
+  }
+
+  .appointment-clock-icon {
+    @apply h-5 self-start pr-1.5 mt-[3px] opacity-50 dark:opacity-80;
+  }
+
+  .appointment-duration {
+    @apply flex-1 opacity-50 dark:opacity-80 mr-4 pr-4 border-r border-zinc-950/10 dark:border-zinc-50/50;
+  }
+
+  .appointment-details {
+    @apply flex flex-col w-3/5;
+  }
+
+  .appointment-price {
+    justify-self: end;
+  }
+
+  .appointment-small-print {
+    @apply opacity-60 italic text-base;
+  }
+
+  #acknowledgement p {
+    @apply text-2xl leading-relaxed;
   }
 }
