@@ -78,6 +78,7 @@ module.exports = {
       backgroundColor: ["odd"],
       brightness: ["odd"],
       backgroundImage: {
+        "headerBlue": "url('../_assets/_images/_sections/alexander-andrews-1QK0GQx-jY0-unsplash.webp')",
         "mistyHills": "url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp')",
         "clouds": "url('../_assets/_images/_sections/diego-ph-BCuxVP5WEsU-unsplash.webp')",
         "beach": "url('../_assets/_images/_sections/ameen-fahmy-7RZj4IrPT9Y-unsplash.webp')",

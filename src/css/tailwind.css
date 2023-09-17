@@ -495,10 +495,11 @@
 
   /* support services available */
   #services li {
-    @apply flex flex-row gap-4 bg-amber-100 border-4 border-amber-200 text-amber-950 rounded-xl p-4 items-center;
+    @apply flex flex-row gap-4 bg-gradient-to-br from-zinc-100 to-zinc-300/20 border border-zinc-900/10 text-zinc-950 rounded-lg px-4 py-3 items-center;
   }
+
   #services li h3 {
-    @apply font-bold text-xl pb-0;
+    @apply font-medium text-lg pb-0 leading-tight;
   }
 
   #acknowledgement {
@@ -532,7 +533,7 @@
   }
 
   .appointment-card {
-    @apply flex flex-col p-4 bg-slate-200/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
+    @apply flex flex-col p-4 bg-[url('../_assets/_arrows/arrows-blue.svg')]  bg-opacity-5 bg-cover bg-slate-200/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
   }
 
   .appointment-headline {
