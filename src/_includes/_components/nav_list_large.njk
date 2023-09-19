@@ -7,8 +7,8 @@
         <img src="../../_assets/_icons/_navigation/{{ entry.icon | safe }}"
                 alt="">
       </span> #}
-      <span class="lg:navigation-unordered_list-item_text_link-large">
-        <a {% if entry.url == page.url %} class="active-class" {% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+      <span class="lg:navigation-unordered_list-item_text_link-large hover:bg-blue-500/10 dark:hover:bg-orange-300/10 hover:rounded-md px-3 py-2">
+        <a {% if entry.url == page.url %} class="active-class " {% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
       </span>
     </li>
   {%- endfor %}

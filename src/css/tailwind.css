@@ -75,7 +75,7 @@
   }
 
   a:hover:not([class]) {
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
 
   /* Make images easier to work with */
@@ -352,7 +352,7 @@
 ==========================|==========================
 */
   .navigation-unordered_list-large {
-    @apply flex flex-row items-center justify-center gap-x-8;
+    @apply flex flex-row items-center justify-center gap-x-2;
   }
 
   .navigation-unordered_list-item-large {
@@ -464,6 +464,10 @@
 }
 
 /* CustomCSS */
+p::selection {
+  @apply bg-sky-400 dark:bg-orange-400 text-sky-950 dark:text-orange-950 select-text;
+}
+
 @layer utilities {
   .animation-delay-2000 {
     animation-delay: 2s;
@@ -495,15 +499,15 @@
 
   /* support services available */
   #services li {
-    @apply flex flex-row gap-4 bg-gradient-to-br from-zinc-100 to-zinc-300/20 border border-zinc-900/10 text-zinc-950 rounded-lg px-4 py-3 items-center;
+    @apply flex flex-row gap-4 bg-gradient-to-br from-amber-50 to-amber-200/20 border border-zinc-900/5 text-zinc-950 rounded-lg px-4 py-12 items-center;
   }
 
   #services li h3 {
-    @apply font-medium text-lg pb-0 leading-tight;
+    @apply font-medium text-xl pb-0 leading-tight;
   }
 
   #acknowledgement {
-    background: url("../_assets/_images/_sections/Mary_River_from_Dickabram_Bridge.webp") no-repeat center center/cover;
+    background: url("../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp") no-repeat center center/cover;
   }
 
   .lines-either-side {
@@ -532,8 +536,16 @@
     @apply text-slate-800 dark:text-slate-100 font-thin text-2xl;
   }
 
+  .body-subtitle {
+    @apply text-slate-800 dark:text-slate-100 font-thin;
+  }
+
+  p, li {
+    @apply text-slate-800 dark:text-slate-100 font-thin;
+  }
+
   .appointment-card {
-    @apply flex flex-col p-4 bg-[url('../_assets/_arrows/arrows-blue.svg')]  bg-opacity-5 bg-cover bg-slate-200/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
+    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-slate-200/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
   }
 
   .appointment-headline {
@@ -564,7 +576,7 @@
     @apply opacity-60 italic text-base;
   }
 
-  #acknowledgement p {
-    @apply text-2xl leading-relaxed;
+  #acknowledgement blockquote p {
+    @apply text-2xl leading-relaxed text-neutral-950;
   }
 }

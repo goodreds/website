@@ -6,8 +6,10 @@
   {# Internal container for the announcement bubble and theme toggle switch #}
   <div class="mx-auto flex justify-between lg:max-w-7xl">
     {# Announcement bubble #}
-    <div id="announcement" class="flex items-center space-x-2 rounded-md bg-gradient-to-tr from-amber-600 to-amber-400 py-1 px-2 text-white" href="contact/">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-speakerphone h-6 w-6 -rotate-12"
+    <a href="/contact/">
+    <div id="announcement" class="flex items-center space-x-2 rounded-md bg-gradient-to-tr from-sky-300 to-sky-400 py-1 px-2 text-white">
+      <img src="../_assets/_icons/_therapy/telehealth.svg" alt="Telehealth icon" class="h-6 w-6 -rotate-12">
+      {# <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-speakerphone h-6 w-6 -rotate-12"
         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
         stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -16,11 +18,12 @@
         <path
           d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8">
         </path>
-      </svg>
+      </svg> #}
       <p class="self-center pr-4 text-sm font-bold leading-5 tracking-wide">
-        Arrange a Telehealth appointment today today<span class="hidden md:inline"></span>
+        Arrange a Telehealth appointment today<span class="hidden md:inline"></span>
       </p>
     </div>
+    </a>
 
     <div id="dark-theme-toggle-switch" class="flex items-center justify-end space-x-2">
       <!-- ==========================|========================== -->
