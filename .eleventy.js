@@ -132,7 +132,8 @@ module.exports = function (eleventyConfig) {
       "avif",
       "woff",
       "woff2",
-      "ttf"
+      "ttf",
+      "webp"
     ],
     addPassthroughCopy: true,
   };

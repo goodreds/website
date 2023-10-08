@@ -37,6 +37,10 @@ module.exports = {
       black: colors.black,
       current: "currentColor",
       transparent: "transparent",
+      ss_green: "#BAB86C",
+      ss_orange: "#cc8400",
+      ss_sand: "#D3C7A2",
+      ss_gray: "#8F8e77",
     },
     fontFamily: {
       sans: [
