@@ -572,6 +572,10 @@ p::selection {
     @apply opacity-60 italic text-base;
   }
 
+  #introduction {
+    background: url("../_assets/_backgrounds/office.webp") no-repeat center center/cover;
+  }
+
   #acknowledgement {
     background: url("../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp") no-repeat center center/cover;
   }
