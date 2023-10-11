@@ -124,16 +124,17 @@ module.exports = function (eleventyConfig) {
       data: "_data",
     },
     templateFormats: [
+      "avif",
+      "html",
       "ico",
       "md",
       "njk",
-      "html",
+      "png",
       "svg",
-      "avif",
+      "ttf",
+      "webp",
       "woff",
       "woff2",
-      "ttf",
-      "webp"
     ],
     addPassthroughCopy: true,
   };

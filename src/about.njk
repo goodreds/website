@@ -1,21 +1,20 @@
 ---
 title: About
 description: This is the about page.
+layout: 'default.njk'
 eleventyNavigation:
   key: about
   order: 5
   icon: nav-icon-about.svg
 ---
 
-{# The layout to use #}
-{% extends "src/_includes/default.njk" %}
+{% block content %}
 
-  {% block content %}
+<div class="bg-mh_green/20 dark:bg-neutral-800">
 
   <!-- ==========================|========================== -->
   <!--                      HEADER_ABOUT                     -->
   <!-- ==========================|========================== -->
-
   {% block header_about %}
     {% include '_core/header_about.njk' %}
   {% endblock %}
@@ -28,20 +27,21 @@ eleventyNavigation:
     {% include '_core/about.njk' %}
   {% endblock %}
 
-  <!-- ==========================|========================== -->
-  <!--                       TELEHEALTH                      -->
-  <!-- ==========================|========================== -->
+</div>
+<!-- ==========================|========================== -->
+<!--                       TELEHEALTH                      -->
+<!-- ==========================|========================== -->
 
-  {# {% block telehealth %} #}
-    {# {% include '_core/telehealth.njk' %} #}
-  {# {% endblock %} #}
+{# {% block telehealth %} #}
+  {# {% include '_core/telehealth.njk' %} #}
+{# {% endblock %} #}
 
-  <!-- ==========================|========================== -->
-  <!--                     TESTIMONIALS                      -->
-  <!-- ==========================|========================== -->
+<!-- ==========================|========================== -->
+<!--                     TESTIMONIALS                      -->
+<!-- ==========================|========================== -->
 
-  {# {% block testimonials %}
-    {% include '_core/acknowledgement.njk' %}
-  {% endblock %} #}
+{# {% block testimonials %}
+  {% include '_core/acknowledgement.njk' %}
+{% endblock %} #}
 
-  {% endblock %}
+{% endblock %}

@@ -18,7 +18,7 @@
     --text_neutral_dark: 236 72 153;
   }
   ::selection {
-    @apply bg-sky-600 text-white dark:bg-pink-600;
+    @apply bg-mh_green text-white dark:bg-mh_orange;
   }
 }
 
@@ -162,17 +162,18 @@
   /* ----------------------------------------------------------------------- */
 
   /* Temporary development server rules */
-  .blueprint > div {
-    /* @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200/10 dark:bg-sky-800/10 bg-opacity-25; */
+  /* .blueprint > div {
+    @apply border border-dashed border-sky-400 border-opacity-25 bg-sky-200/10 dark:bg-sky-800/10 bg-opacity-25;
   }
 
   .border-blueprint {
-    /* @apply border border-dashed border-sky-400 border-opacity-25; */
+    @apply border border-dashed border-sky-400 border-opacity-25;
   }
 
   .tester {
     background: url('../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash copy.webp');
-  }
+  } */
+
   /* Global Styles */
   html {
     visibility: hidden;
@@ -218,8 +219,11 @@
   figcaption,
   blockquote,
   legend,
-  caption {
+  caption,
+  p {
     text-wrap: balance;
+    opacity: 0.9;
+    @apply prose xl:prose-xl 2xl:prose-2xl;
   }
 
   h1 {
@@ -297,7 +301,7 @@
 
   /* Active Class */
   .active-class {
-    @apply text-sky-500 dark:text-orange-500 border-b-2 pb-1 border-sky-500 dark:border-orange-500 font-bold;
+    @apply text-mh_green dark:text-mh_orange border-b-2 pb-1 border-mh_green dark:border-mh_orange font-bold;
   }
 
   /* Dotted Outline */
@@ -343,7 +347,7 @@
   }
 
   p + p {
-    @apply mb-4;
+    @apply pt-8;
   }
 
   /*
@@ -419,7 +423,7 @@
 
   .slanted-bottom {
     clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
-    margin-top: -40px;
+    margin-top: -51px;
   }
 
   .arrow-top {
@@ -465,7 +469,7 @@
 
 /* CustomCSS */
 p::selection {
-  @apply bg-sky-400 dark:bg-orange-400 text-sky-950 dark:text-orange-950 select-text;
+  @apply bg-mh_green text-white/80 dark:bg-mh_orange select-text;
 }
 
 @layer utilities {
@@ -499,19 +503,15 @@ p::selection {
 
   /* support services available */
   #services li {
-    @apply flex flex-row gap-4 bg-gradient-to-br from-amber-50 to-amber-200/20 border border-zinc-900/5 text-zinc-950 rounded-lg px-4 py-12 items-center;
+    @apply flex flex-row gap-4 bg-gradient-to-br from-mh_orange/5 dark:to-mh_gray/0 to-mh_green/10 border border-zinc-900/10 dark:border-zinc-50/5 rounded-lg px-4 py-12 items-center;
   }
 
   #services li h3 {
-    @apply font-medium text-xl pb-0 leading-tight;
+    @apply text-xl pb-0 leading-tight text-neutral-800/60 dark:text-neutral-200/60 font-medium text-center;
   }
 
   .lines-either-side {
     @apply grid grid-cols-[1fr_auto_1fr] font-light tracking-widest text-zinc-950/50 gap-5 items-center uppercase grow before:bg-zinc-950/10 before:h-[1px] after:bg-zinc-950/10 after:h-[1px] dark:text-zinc-50/40 dark:before:bg-zinc-50/10 dark:after:bg-zinc-50/10;
-  }
-
-  .qualy {
-
   }
 
   .qualy>li {
@@ -525,7 +525,7 @@ p::selection {
   }
 
   .header-title {
-    @apply text-slate-800 dark:text-slate-100 font-thin text-7xl border-b border-zinc-950/20 dark:border-zinc-50/50 pb-12 mb-12;
+    @apply text-slate-800 dark:text-slate-100 font-thin text-6xl md:text-7xl border-b border-zinc-950/20 dark:border-zinc-50/50 pb-12 mb-12;
   }
 
   .header-subtitle {
@@ -541,11 +541,11 @@ p::selection {
   }
 
   .appointment-card {
-    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-slate-200/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
+    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-mh_green/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
   }
 
   .appointment-headline {
-    @apply grid text-2xl font-light tracking-wide text-zinc-950/50 uppercase after:bg-zinc-950/10 after:h-[1px] after:mt-3 dark:text-zinc-50/80 dark:after:bg-zinc-50/50;
+    @apply grid text-xl font-light tracking-wide text-stone-700/75 uppercase after:bg-stone-700/75 after:h-[1px] after:mt-3 dark:text-zinc-50/80 dark:after:bg-zinc-50/50;
   }
 
   .appointment-below-the-line {
@@ -557,7 +557,7 @@ p::selection {
   }
 
   .appointment-duration {
-    @apply flex-1 opacity-50 dark:opacity-80 mr-4 pr-4 border-r border-zinc-950/10 dark:border-zinc-50/50;
+    @apply text-base flex-1 opacity-50 dark:opacity-80 pt-[2px] mr-4 pr-4 border-r border-zinc-950/10 dark:border-zinc-50/50;
   }
 
   .appointment-details {
@@ -572,19 +572,43 @@ p::selection {
     @apply opacity-60 italic text-base;
   }
 
-  #introduction {
-    background: url("../_assets/_backgrounds/office.webp") no-repeat center center/cover;
+  .introduction-index {
+    background: url("../_assets/_images/_hero/sunset-alpha.webp") no-repeat center bottom/cover;
   }
 
-  #acknowledgement {
+  .introduction-index-dark {
+    background: url("../_assets/_images/_hero/stars-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .introduction-about {
+    background: url("../_assets/_images/_hero/mountain-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .introduction-contact {
+    background: url("../_assets/_images/_hero/hands-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .introduction-fees {
+    background: url("../_assets/_images/_hero/sofa-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .introduction-privacy {
+    background: url("../_assets/_images/_hero/steps-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .acknowledgement {
     background: url("../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp") no-repeat center center/cover;
   }
 
-  #acknowledgement blockquote {
+  .acknowledgement-dark {
+    background: url("../_assets/_images/_sections/Mary_River_from_Dickabram_Bridge-alpha.webp") no-repeat center center/cover;
+  }
+
+  .acknowledgement blockquote {
     @apply bg-white/50 px-16 pt-16 pb-12 border border-neutral-500/20 rounded-lg shadow-xl;
   }
 
-  #acknowledgement blockquote p {
+  .acknowledgement blockquote p {
     @apply text-xl leading-relaxed text-neutral-950/60 font-medium;
   }
 }

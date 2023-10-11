@@ -1,15 +1,17 @@
 ---
 title: Fees
 description: This is the fees page.
+layout: 'default.njk'
 eleventyNavigation:
   key: fees
   order: 5
   icon: nav-icon-pricing.svg
 ---
 
-{# The layout to use #}
-{% extends "src/_includes/default.njk" %}
 {% block content %}
+
+<div class="bg-mh_orange/10 dark:bg-neutral-800">
+
   <!-- ==========================|========================== -->
   <!--                      HEADER_FEES                      -->
   <!-- ==========================|========================== -->
@@ -41,5 +43,7 @@ eleventyNavigation:
   {# {% block testimonials %}
     {% include '_core/acknowledgement.njk' %}
   {% endblock %} #}
+
+</div>
 
 {% endblock %}
