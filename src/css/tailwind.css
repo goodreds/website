@@ -221,7 +221,7 @@
   legend,
   caption,
   p {
-    text-wrap: balance;
+    /* text-wrap: balance; */
     opacity: 0.9;
     @apply prose xl:prose-xl 2xl:prose-2xl;
   }
@@ -525,7 +525,7 @@ p::selection {
   }
 
   .header-title {
-    @apply text-slate-800 dark:text-slate-100 font-thin text-6xl md:text-7xl border-b border-zinc-950/20 dark:border-zinc-50/50 pb-12 mb-12;
+    @apply prose xl:prose-xl 2xl:prose-2xl text-slate-800 dark:text-slate-100 font-normal text-6xl md:text-7xl border-b border-zinc-950/20 dark:border-zinc-50/50 pb-12 mb-12;
   }
 
   .header-subtitle {
@@ -572,6 +572,13 @@ p::selection {
     @apply opacity-60 italic text-base;
   }
 
+  .introduction {
+    background: url("../_assets/_images/_hero/abstract-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .introduction-dark {
+    background: url("../_assets/_images/_hero/abstract-alpha-dark.webp") no-repeat center bottom/cover;
+  }
   .introduction-index {
     background: url("../_assets/_images/_hero/sunset-alpha.webp") no-repeat center bottom/cover;
   }
@@ -582,6 +589,10 @@ p::selection {
 
   .introduction-about {
     background: url("../_assets/_images/_hero/mountain-alpha.webp") no-repeat center bottom/cover;
+  }
+
+  .introduction-about-dark {
+    background: url("../_assets/_images/_hero/coral-alpha.webp") no-repeat center bottom/cover;
   }
 
   .introduction-contact {
