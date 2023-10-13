@@ -248,7 +248,7 @@
   p,
   li,
   blockquote:not([class]) {
-    max-width: 55ch;
+    max-width: 70ch;
     font-size: var(--size-step-0);
   }
 
@@ -346,8 +346,8 @@
     @apply items-center justify-center;
   }
 
-  p + p {
-    @apply pt-8;
+  .payment-opts p + p {
+    @apply py-4;
   }
 
   /*
@@ -533,7 +533,7 @@ p::selection {
   }
 
   .body-subtitle {
-    @apply text-slate-800 dark:text-slate-100 font-thin;
+    @apply text-slate-800 dark:text-slate-100 font-thin pt-8;
   }
 
   p, li {
@@ -541,7 +541,7 @@ p::selection {
   }
 
   .appointment-card {
-    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-mh_green/5 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-zinc-400/20 dark:ring-zinc-50/50;
+    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-mh_green/10 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-inset ring-zinc-400/20 dark:ring-zinc-50/50;
   }
 
   .appointment-headline {
