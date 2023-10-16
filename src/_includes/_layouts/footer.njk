@@ -1,8 +1,7 @@
 <!-- ==========================|========================== -->
 <!--                         FOOTER                        -->
 <!-- ==========================|========================== -->
-  <footer class="">
-    <div class="mx-auto max-w-screen-xl space-y-8 overflow-hidden px-4 sm:px-6">
+  <footer class=""> <div class="mx-auto max-w-screen-xl space-y-8 overflow-hidden px-4 sm:px-6">
     <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
       <div class="px-5 py-2">
         <a
@@ -32,32 +31,55 @@
           Contact
         </a>
       </div>
-      <div class="px-5 py-2">
-        <a
-          href="/privacy-policy"
-          class="text-base leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
-          Privacy Policy
-        </a>
-      </div>
     </nav>
     <div class="mt-8 flex justify-center space-x-8">
       <a href="/#" class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
         <span class="sr-only">Facebook</span>
         {# Facebook icon #}
-        <img class="block dark:hidden drop-shadow-sm h-6 w-6" src="../../_assets/_icons/_footer-icons/facebook-light.svg" alt="Facebook link" width="24" height="24" />
-        <img class=" dark:block hidden drop-shadow-sm h-6 w-6" src=" ../../_assets/_icons/_footer-icons/facebook-dark.svg" alt="Facebook link" width="24" height="24" />
+        <img
+          class="block dark:hidden drop-shadow-sm h-6 w-6"
+          src="../../_assets/_icons/_footer-icons/facebook-light.svg"
+          alt="Facebook link"
+          width="24"
+          height="24"/>
+        <img
+          class=" dark:block hidden drop-shadow-sm h-6 w-6"
+          src=" ../../_assets/_icons/_footer-icons/facebook-dark.svg"
+          alt="Facebook link"
+          width="24"
+          height="24"/>
       </a>
       <a href="/#" class="-mt-1 text-stone-400 opacity-90 hover:text-stone-500">
         <span class="sr-only">{{ business.name }}</span>
         {# MyHill icon #}
-        <img class="block dark:hidden drop-shadow-sm h-8 w-auto" src="../_assets/_logos/myhill-logo-light-sm.svg" alt="MyHill Psychology homepage link" width="32" height="32" />
-        <img class=" dark:block hidden drop-shadow-sm h-8 w-auto" src=" ../_assets/_logos/myhill-logo-dark-sm.svg" alt="MyHill Psychology homepage link" width="32" height="32" />
+        <img
+          class="block dark:hidden drop-shadow-sm h-8 w-auto"
+          src="../_assets/_logos/myhill-logo-light-sm.svg"
+          alt="MyHill Psychology homepage link"
+          width="32"
+          height="32"/>
+        <img
+          class=" dark:block hidden drop-shadow-sm h-8 w-auto"
+          src=" ../_assets/_logos/myhill-logo-dark-sm.svg"
+          alt="MyHill Psychology homepage link"
+          width="32"
+          height="32"/>
       </a>
       <a href="/#" class="text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
         <span class="sr-only">Instagram</span>
         {# Instagram icon #}
-        <img class="block dark:hidden drop-shadow-sm h-6 w-6" src="../../_assets/_icons/_footer-icons/instagram.svg" alt="instagram link" width="24" height="24" />
-        <img class=" dark:block hidden drop-shadow-sm h-6 w-6" src=" ../../_assets/_icons/_footer-icons/instagram-dark.svg" alt="instagram link" width="24" height="24" />
+        <img
+          class="block dark:hidden drop-shadow-sm h-6 w-6"
+          src="../../_assets/_icons/_footer-icons/instagram.svg"
+          alt="instagram link"
+          width="24"
+          height="24"/>
+        <img
+          class=" dark:block hidden drop-shadow-sm h-6 w-6"
+          src=" ../../_assets/_icons/_footer-icons/instagram-dark.svg"
+          alt="instagram link"
+          width="24"
+          height="24"/>
       </a>
     </div>
     <div class="w-full flex items-center justify-center ">
@@ -71,22 +93,35 @@
       </p>
     </div>
     {# Phone details (optional) #}
-    <div class="flex flex-col items-center gap-2 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-phone"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-      </svg>
-      <p class="text-center text-base">{{ business.businessNumber }}</p>
+    <div class="flex flex-center-outer">
+      <div class="flex flex-center-inner">
+        <div class="flex flex-col gap-16">
+          <div class="flex flex-col items-center gap-2 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-stone-50">
+            <p class="text-center text-base">{{ business.businessNumber }}</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-phone"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+            </svg>
+          </div>
+        <p>
+          <a
+            href="/privacy-policy"
+            class="text-base leading-6 text-stone-700/50 hover:text-stone-900/80 dark:text-stone-200/50 dark:hover:text-stone-50/80 no-underline">
+            Privacy Policy
+          </a>
+        </p>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
