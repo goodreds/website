@@ -579,33 +579,6 @@ p::selection {
   .introduction-dark {
     background: url("../_assets/_images/_hero/abstract-alpha-dark.webp") no-repeat center bottom/cover;
   }
-  .introduction-index {
-    background: url("../_assets/_images/_hero/sunset-alpha.webp") no-repeat center bottom/cover;
-  }
-
-  .introduction-index-dark {
-    background: url("../_assets/_images/_hero/stars-alpha.webp") no-repeat center bottom/cover;
-  }
-
-  .introduction-about {
-    background: url("../_assets/_images/_hero/mountain-alpha.webp") no-repeat center bottom/cover;
-  }
-
-  .introduction-about-dark {
-    background: url("../_assets/_images/_hero/coral-alpha.webp") no-repeat center bottom/cover;
-  }
-
-  .introduction-contact {
-    background: url("../_assets/_images/_hero/hands-alpha.webp") no-repeat center bottom/cover;
-  }
-
-  .introduction-fees {
-    background: url("../_assets/_images/_hero/sofa-alpha.webp") no-repeat center bottom/cover;
-  }
-
-  .introduction-privacy {
-    background: url("../_assets/_images/_hero/steps-alpha.webp") no-repeat center bottom/cover;
-  }
 
   .acknowledgement {
     background: url("../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp") no-repeat center center/cover;
