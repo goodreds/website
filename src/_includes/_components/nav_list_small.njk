@@ -1,10 +1,9 @@
 {% set navPages = collections.all | eleventyNavigation %}
 <ul class="navigation-unordered_list-small scale-110 sm:scale-125 md:scale-150">
   {%- for entry in navPages %}
-    <li class="navigation-unordered_list-item-small flex-center-outer">
-      <span class="navigation-unordered_list-item_icon-small flex-center-inner ">
-        <img class="h-6 w-6 fill-stone-600" src="../../_assets/_icons/_navigation/{{ entry.icon | safe }}"
-                alt="">
+    <li class="navigation-unordered_list-item-small flex flex-center-outer">
+      <span class="navigation-unordered_list-item_icon-small flex flex-center-inner ">
+        <img class="h-6 w-6 fill-stone-600" src="../../_assets/_icons/_navigation/{{ entry.icon | safe }}" alt=""/>
       </span>
       <span class="navigation-unordered_list-item_text_link-small">
         <a {% if entry.url == page.url %} class="active-class" {% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
