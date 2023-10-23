@@ -523,10 +523,10 @@ p::selection {
   }
 
   .lines-either-side {
-    @apply grid grid-cols-[1fr_auto_1fr] font-light tracking-widest text-zinc-950/50 gap-x-5 items-center uppercase grow before:bg-zinc-950/10 before:h-[1px] after:bg-zinc-950/10 after:h-[1px] dark:text-zinc-50/40 dark:before:bg-zinc-50/10 dark:after:bg-zinc-50/10;
+    @apply grid grid-cols-[1fr_auto_1fr] font-light tracking-widest text-zinc-950/50 gap-x-5 items-center uppercase grow before:bg-neutral-950/50 before:h-[1px] after:bg-neutral-950/50 after:h-[1px] dark:text-neutral-50/50 dark:before:bg-neutral-50/50 dark:after:bg-neutral-50/50;
   }
   .lines-either-side-text-formatting {
-    @apply font-light tracking-widest text-zinc-950/50 items-center uppercase dark:text-zinc-50/40 dark:before:bg-zinc-50/10 dark:after:bg-zinc-50/10 text-center;
+    @apply font-light tracking-widest text-neutral-950/50 items-center uppercase dark:text-neutral-50/50 text-center;
   }
 
   .qualy>li {
