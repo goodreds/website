@@ -67,7 +67,8 @@ module.exports = function (eleventyConfig) {
     "./src/js/filters.js": "js/filters.js",
     "./src/js/shortcodes.js": "js/shortcodes.js",
     "./src/js/three.min.js": "js/three.min.js",
-    "./src/js/vanta.fog.min.js": "js/vanta.fog.min.js",
+    "./src/js/focus.js": "js/focus.js",
+    "./src/js/ui.js": "js/ui.js",
   });
   eleventyConfig.addPassthroughCopy({ "_assets/*": "_assets/" });
 
@@ -133,3 +134,5 @@ module.exports = function (eleventyConfig) {
     addPassthroughCopy: true,
   };
 };
+
+
