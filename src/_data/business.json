@@ -1,6 +1,7 @@
 {
   "name": "MyHill Psychology",
   "location": "Burpengary, Queensland",
+  "title": "Registered Psychology Services",
   "address": {
     "streetNo": "",
     "street": "",
@@ -11,19 +12,44 @@
   },
   "businessNumber": "0422 178 187",
   "businessEmail": "myhillpsychology@gmail.com",
-  "businessType": "Psychologist",
+  "businessType": "Registered Psychologist",
 
   "yearStarted": "2023",
-  "phone": "",
+  "phone": "0422 178 187",
   "keywords": {
     "keyword1": "psychology",
-    "keyword2": "EMDRIA",
+    "keyword2": "EMDR",
     "keyword3": "MAPS",
-    "keyword4": "",
-    "keyword5": ""
+    "keyword4": "support",
+    "keyword5": "therapy",
+    "keyword6": "survivors",
+    "keyword7": "complex trauma",
+    "keyword8": "PTSD",
+    "keyword9": "anxiety",
+    "keyword10": "interpersonal difficulties",
+    "keyword11": "work-related stress",
+    "keyword12": "adjustment difficulties",
+    "keyword13": "transition difficulties",
+    "keyword14": "children with problem sexual behaviours",
+    "keyword15": "adolescents with harmful sexual behaviours",
+    "keyword16": "parenting challenges",
+    "keyword17": "Eye Movement Desensitisation Reprocessing (EMDR)",
+    "keyword18": "Trauma Informed Cognitive Behaviour Therapy (CBT)",
+    "keyword19": "Acceptance and Commitment Therapy (ACT)",
+    "keyword20": "Schema Therapy",
+    "keyword21": "Ego State Therapy",
+    "keyword22": "Motivational Interviewing",
+    "keyword23": "Interpersonal Psychotherapy",
+    "keyword24": "Sensorimotor Psychotherapy"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/myhillpsychology",
+    "instagram": "https://www.instagram.com/myhillpsychology/",
+    "linkedin": "https://www.linkedin.com/in/emma-myhill-8a1b1a1b/",
+    "twitter": "https://twitter.com/myhillpsych"
   },
   "socialGraph": {
-    "title": "MyHill Psychology DEVELOPMENT Server",
+    "title": "MyHill Psychology",
     "type": "website",
     "image": "https://myhill-psychology.netlify.app/_assets/_logos/myhill-logo-light-sm.svg",
     "url": "http://myhill-psychology.netlify.app/",

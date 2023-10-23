@@ -8,6 +8,7 @@ const shortcodes = require("./src/js/shortcodes");
 const Image = require("@11ty/eleventy-img");
 const path = require('path');
 const { URL } = require("url");
+const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 
 // Load environment variables
 require("dotenv").config();
@@ -20,6 +21,7 @@ module.exports = function (eleventyConfig) {
 
   // Add plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(faviconsPlugin, { 'manifestData': { 'name': 'MyHill Psychology' } });
 
   // Set Nunjucks environment options
   eleventyConfig.setNunjucksEnvironmentOptions({
@@ -67,14 +69,6 @@ module.exports = function (eleventyConfig) {
     "./src/js/three.min.js": "js/three.min.js",
     "./src/js/vanta.fog.min.js": "js/vanta.fog.min.js",
   });
-  // eleventyConfig.addPassthroughCopy({ "./src/_assets/_video/*.{webm,mp4,ogv,mov}": "_assets/_video" });
-  // eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/_favicons/*": "/" });
-  // eleventyConfig.addPassthroughCopy({ "./src/_assets/_icons/*.svg": "_assets/_icons" });
-  // eleventyConfig.addPassthroughCopy({ "./src/_assets/_images/*": "_assets/_images" });
-  // eleventyConfig.addPassthroughCopy({ "./src/_assets/_images/_sections/*": "_assets/_images/_sections" });
-
-  // eleventyConfig.addPassthroughCopy({ "./src/news/images/*": "news/images" });
-  // eleventyConfig.addPassthroughCopy("./src/admin");
   eleventyConfig.addPassthroughCopy({ "_assets/*": "_assets/" });
 
   // Dev Server 1.0 options
