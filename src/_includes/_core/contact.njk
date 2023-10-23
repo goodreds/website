@@ -99,30 +99,25 @@
           </div>
           {# Radio button to choose practitioner #}
           <div class="group relative z-0 mb-2">
-            <fieldset
-              class="text-base">
-              {# TODO: Ask Suzanne about how she would like to be referred to here - practitioner, psychologist etc #}
+            <fieldset class="text-base">
               <legend class="text-base">Select psychologist:</legend>
-
               <!-- Radio -->
               <div
                 x-data="{ value: 'suzanne' }" x-radio x-model="value" class="max-w-xl w-full">
-
                 <!-- Radio Label -->
                 <label x-radio:label class="sr-only" for="chosen_psychologist">Psychologist:
                   <span x-text="value"></span>
                 </label>
-
                 <div
                   class="mt-4 space-y-3">
                   <!-- Option -->
                   <div
                     x-radio:option
-                    name="chosen_psychologist"
-                    id="chosen_psychologist"
+                    name="psychologist"
+                    id="suzanne"
                     value="suzanne"
-                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none focus:ring-4
-                      ring-mh_green/50 dark:ring-mh_orange"
+                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none
+                      focus:ring-4 ring-mh_green/50 dark:ring-mh_orange"
                     :class="{ 'shadow': $radioOption.isChecked }">
                     <!-- Checked Indicator -->
                     <span
@@ -140,14 +135,13 @@
                       </span>
                     </span>
                   </div>
-
                   <div
                     x-radio:option
-                    name="chosen_psychologist"
-                    id="chosen_psychologist"
+                    name="psychologist2"
+                    id="kathleen"
                     value="kathleen"
-                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none focus:ring-4
-                      ring-mh_green/50 dark:ring-mh_orange"
+                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none
+                      focus:ring-4 ring-mh_green/50 dark:ring-mh_orange"
                     :class="{ 'shadow': $radioOption.isChecked }">
                     <span
                       :class="{ 'bg-slate-500': $radioOption.isChecked }"
@@ -161,7 +155,6 @@
                       </span>
                     </span>
                   </div>
-
                 </div>
               </div>
             </fieldset>
