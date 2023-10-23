@@ -221,8 +221,8 @@
   legend,
   caption,
   p {
-    /* text-wrap: balance; */
-    opacity: 0.9;
+    text-wrap: pretty;
+    opacity: 0.7;
     @apply prose xl:prose-xl 2xl:prose-2xl;
   }
 
@@ -411,7 +411,7 @@
 
   /* LUC - Lighter, uppercase, centred  */
   .luc {
-    @apply font-light tracking-widest text-neutral-950/50 uppercase dark:text-neutral-50/50;
+    @apply font-light tracking-widest text-neutral-950 uppercase dark:text-neutral-50;
   }
 
   .luc + .luc {
@@ -524,11 +524,23 @@ p::selection {
 
   /* support services available */
   #services li {
-    @apply flex flex-row gap-4 bg-gradient-to-br from-mh_orange/5 dark:to-mh_gray/0 to-mh_green/10 border border-zinc-900/10 dark:border-zinc-50/5 rounded-lg px-4 py-12 items-center;
+    @apply flex flex-row gap-4 from-mh_gray/10 dark:to-mh_gray/0 to-mh_gray/0 border border-zinc-900/10 dark:border-zinc-50/10 rounded-lg px-4 py-12 items-center bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover;
+  }
+  #services li.orange {
+    @apply bg-mh_orange/5;
+  }
+  #services li.green {
+    @apply bg-mh_green/10;
+  }
+  #services li.sand {
+    @apply bg-mh_sand/10;
+  }
+  #services li.gray {
+    @apply bg-mh_gray/10;
   }
 
   #services li h3 {
-    @apply text-xl pb-0 leading-tight text-neutral-800/60 dark:text-neutral-200/60 font-medium text-center;
+    @apply text-xl pb-0 leading-tight text-neutral-800/60 dark:text-neutral-200/80 font-medium text-center;
   }
 
   .lines-either-side {
@@ -542,7 +554,7 @@ p::selection {
   }
 
   .header-container {
-    @apply md:w-2/5 py-12 opacity-60 dark:opacity-80;
+    @apply md:w-2/5 py-12 opacity-60 dark:opacity-80 min-h-[15%];
   }
 
   .header-title {
@@ -562,7 +574,7 @@ p::selection {
   }
 
   .appointment-card {
-    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-mh_green/10 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-inset ring-zinc-400/20 dark:ring-zinc-50/50;
+    @apply flex flex-col p-4 bg-[url('../_assets/_hex/hex-light.svg')] dark:bg-[url('../_assets/_hex/hex-dark.svg')]  bg-opacity-5 bg-cover bg-mh_gray/10 shadow-inner shadow-zinc-950/5 rounded-lg overflow-clip ring-1 ring-inset ring-zinc-400/20 dark:ring-zinc-50/50;
   }
 
   .appointment-headline {
@@ -602,18 +614,18 @@ p::selection {
   }
 
   .acknowledgement {
-    background: url("../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash.webp") no-repeat center center/cover;
+    background: url("../_assets/_images/_sections/valeria-davgon-7I5iYg1KxVs-unsplash.webp") no-repeat center center/cover;
   }
 
   .acknowledgement-dark {
-    background: url("../_assets/_images/_sections/paul-earle-wVjd0eWNqI8-unsplash-alpha.webp") no-repeat center center/cover;
+    background: url("../_assets/_images/_sections/valeria-davgon-7I5iYg1KxVs-unsplash.webp") no-repeat center center/cover;
   }
 
   .acknowledgement blockquote {
-    @apply bg-white/50 px-16 pt-16 pb-12 border border-neutral-500/20 rounded-lg shadow-xl;
+    @apply bg-white/50 dark:bg-black/50 px-16 pt-16 pb-12 border border-neutral-500/20 rounded-lg shadow-xl;
   }
 
   .acknowledgement blockquote p {
-    @apply text-xl leading-relaxed text-neutral-950/60 font-medium;
+    @apply text-xl leading-relaxed text-neutral-950/60 dark:text-neutral-50/90 font-medium;
   }
 }
