@@ -103,7 +103,10 @@
               <legend class="text-base">Select psychologist:</legend>
               <!-- Radio -->
               <div
-                x-data="{ value: 'suzanne' }" x-radio x-model="value" class="max-w-xl w-full">
+                x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne' }, { id: 2, name: 'Kathleen' }, ], }"
+                x-radio
+                x-model="value"
+                class="max-w-xl w-full">
                 <!-- Radio Label -->
                 <label x-radio:label class="sr-only" for="chosen_psychologist">Psychologist:
                   <span x-text="value"></span>
@@ -113,8 +116,7 @@
                   <!-- Option -->
                   <div
                     x-radio:option
-                    name="psychologist"
-                    id="suzanne"
+                    name="chosen_psychologist"
                     value="suzanne"
                     class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none
                       focus:ring-4 ring-mh_green/50 dark:ring-mh_orange"
@@ -137,8 +139,7 @@
                   </div>
                   <div
                     x-radio:option
-                    name="psychologist2"
-                    id="kathleen"
+                    name="chosen_psychologist"
                     value="kathleen"
                     class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none
                       focus:ring-4 ring-mh_green/50 dark:ring-mh_orange"
@@ -159,6 +160,17 @@
               </div>
             </fieldset>
           </div>
+          {# Testing new radio options #}
+          <div x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne' }, { id: 2, name: 'Kathleen' }, ], }">
+            <div x-radio x-model="value">
+              <template x-for="item in values" :key="item.id">
+                <div x-radio:option :value="item">
+                  <span :class="{ 'bg-blue-400': $radioOption.isChecked }" x-text="item.name"></span>
+                </div>
+              </template>
+            </div>
+          </div>
+          {# Message area #}
           <div class="group relative z-0 mb-2 w-full">
             <label
               for="message"
