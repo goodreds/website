@@ -97,16 +97,18 @@
           </div>
           {# Radio button to choose practitioner #}
           <fieldset>
-            <legend class="text-base pb-4">Choose your preferred psychologist</legend>
+            <legend class="text-base pb-4">Choose your <a href="/about" target="_blank">preferred psychologist</a></legend>
             <div class="flex flex-row text-lg">
               <div class="group relative z-0 mb-2 w-full flex flex-row gap-2">
-                <input type="radio" name="psychologist" value="suzanne" class="w-6 h-6" checked/>
-                <label for="suzanne" class="">
+                <input type="radio" name="psychologist" value="suzanne" id="psychologist_1" class="w-6 h-6" checked/>
+                <label for="psychologist_1" class="" x-tooltip="Specialities: Complex Trauma and PTSD, Anxiety and
+                        Stress disorders">
                   Suzanne</label>
               </div>
               <div class="group relative z-0 mb-2 w-full flex flex-row gap-2">
-                <input type="radio" name="psychologist" value="kathleen" class="w-6 h-6"/>
-                <label for="kathleen"class="">
+                <input type="radio" name="psychologist" value="kathleen" id="psychologist_2" class="w-6 h-6"/>
+                <label for="psychologist_2" class="" x-tooltip="Specialities: Trauma informed Cognitive Behavioural Therapy, Acceptance
+                        and Commitment Therapy, Solution Focused Therapy">
                   Kathleen</label>
               </div>
             </div>
