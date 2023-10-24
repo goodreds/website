@@ -100,76 +100,50 @@
           {# Radio button to choose practitioner #}
           <div class="group relative z-0 mb-2">
             <fieldset class="text-base">
-              <legend class="text-base">Select psychologist:</legend>
-              <!-- Radio -->
-              <div
-                x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne' }, { id: 2, name: 'Kathleen' }, ], }"
-                x-radio
-                x-model="value"
-                class="max-w-xl w-full">
-                <!-- Radio Label -->
-                <label x-radio:label class="sr-only" for="chosen_psychologist">Psychologist:
-                  <span x-text="value"></span>
-                </label>
-                <div
-                  class="mt-4 space-y-3">
-                  <!-- Option -->
-                  <div
-                    x-radio:option
-                    name="chosen_psychologist"
-                    value="suzanne"
-                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none
-                      focus:ring-4 ring-mh_green/50 dark:ring-mh_orange"
-                    :class="{ 'shadow': $radioOption.isChecked }">
-                    <!-- Checked Indicator -->
-                    <span
-                      :class="{ 'bg-slate-500': $radioOption.isChecked }"
-                      class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1
-                        ring-gray-600"
-                      aria-hidden="true"></span>
-                    <span
-                      class="ml-3">
-                      <!-- Primary Label -->
-                      <p x-radio:label>Suzanne</p>
-                      <!-- Secondary Information -->
-                      <span x-radio:description class="mt-2 text-sm">
-                        Specialities: Complex Trauma and PTSD, Anxiety and Stress disorders
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    x-radio:option
-                    name="chosen_psychologist"
-                    value="kathleen"
-                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 shadow-sm focus:outline-none
-                      focus:ring-4 ring-mh_green/50 dark:ring-mh_orange"
-                    :class="{ 'shadow': $radioOption.isChecked }">
-                    <span
-                      :class="{ 'bg-slate-500': $radioOption.isChecked }"
-                      class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1
-                        ring-gray-600"
-                      aria-hidden="true"></span>
-                    <span class="ml-3">
-                      <p x-radio:label>Kathleen</p>
-                      <span x-radio:description class="mt-2 text-sm">
-                        Specialities: Trauma informed Cognitive Behavioural Therapy, Acceptance and Commitment Therapy, Solution Focused Therapy
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
+              {# <legend class="text-base">Select psychologist:</legend> #}
+              {# <!-- Radio -->
+
             </fieldset>
           </div>
           {# Testing new radio options #}
-          <div x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne' }, { id: 2, name: 'Kathleen' }, ], }">
-            <div x-radio x-model="value">
-              <template x-for="item in values" :key="item.id">
-                <div x-radio:option :value="item">
-                  <span :class="{ 'bg-blue-400': $radioOption.isChecked }" x-text="item.name"></span>
-                </div>
-              </template>
+          <div x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne', specialities: 'Complex Trauma and PTSD, Anxiety and Stress disorders' }, { id: 2, name: 'Kathleen', specialities: 'Trauma informed Cognitive Behavioural Therapy, Acceptance and Commitment Therapy, Solution Focused Therapy' }, ], }">
+            <label x-radio:label class="sr-only">Choose psychologist that you would like to see:
+              <span x-text="value"></span>
+            </label>
+            <legend class="text-base">Select psychologist</legend>
+            <div x-radio x-model="value" class="max-w-xl w-full">
+              <div class="mt-4 space-y-3">
+                <template x-for="item in values" :key="item.id">
+                  <div
+                    x-radio:option
+                    :value="item"
+                    name="chosen_psychologist"
+                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4  focus:outline-none
+                      focus:ring-4 ring-mh_green/50 dark:ring-mh_orange bg-inherit dark:bg-mh_orange/10"
+                    :class="{ 'shadow-sm': $radioOption.isChecked }"
+                    :class="{ 'bg-mh_green/10 dark:bg-mh_orange': $radioOption.isChecked }">
+                    <span
+                      :class="{ 'bg-mh_green/50 dark:bg-mh_orange': $radioOption.isChecked }"
+                      class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1
+                        ring-mh_green-50 dark:ring-mh_orange"
+                      aria-hidden="true"></span>
+                    <span
+                      class="ml-3 -mt-px">
+                      <!-- Primary Label -->
+                      <p x-radio:label x-text="item.name"></p>
+                      <!-- Secondary Information -->
+                      <div x-radio:description class="text-base">
+                        <span class="text-base">Specialities</span>
+                        <p class="text-sm" x-text="item.specialities"></p>
+                      </div>
+                    </span>
+                  </div>
+                </template>
+              </div>
             </div>
           </div>
+
+
           {# Message area #}
           <div class="group relative z-0 mb-2 w-full">
             <label
