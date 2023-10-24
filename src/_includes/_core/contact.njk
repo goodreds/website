@@ -34,21 +34,21 @@
         method="POST"
         data-netlify-recaptcha="true"
         data-netlify="true"
+        id="myhill-form"
         class="bg-white dark:bg-black default-border rounded-xl p-8 shadow-lg md:w-1/2 mx-4 md:mx-0">
         <div class="flex flex-col xl:gap-2">
           <div class="group relative z-0 mb-2 w-full">
             <input type="hidden" name="subject" value="Contact form via the website"/>
             <input
               type="text"
-              name="floating_name"
-              id="floating_name"
+              name="name"
               class="peer block w-full appearance-none border-0 border-b border-stone-700/20 bg-transparent py-2.5 px-0 text-sm
                 text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-0 dark:border-stone-300/20 dark:text-white
                 dark:focus:border-stone-500"
               placeholder=" "
               required/>
             <label
-              for="floating_name"
+              for="name"
               class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-base text-stone-500 duration-300
                 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6
                 peer-focus:scale-75 peer-focus:text-stone-500 dark:text-stone-200 peer-focus:dark:text-stone-500">
@@ -60,15 +60,14 @@
           <div class="group relative z-0 mb-2 w-full">
             <input
               type="email"
-              name="floating_email"
-              id="floating_email"
+              name="email"
               class="peer block w-full appearance-none border-0 border-b border-stone-700/20 bg-transparent py-2.5 px-0 text-sm
                 text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-0 dark:border-stone-300/20 dark:text-white
                 dark:focus:border-stone-500"
               placeholder=" "
               required/>
             <label
-              for="floating_email"
+              for="email"
               class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-base text-stone-500 duration-300
                 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6
                 peer-focus:scale-75 peer-focus:text-stone-500 dark:text-stone-200 peer-focus:dark:text-stone-500">
@@ -80,15 +79,14 @@
           <div class="group relative z-0 mb-2 w-full">
             <input
               type="tel"
-              name="floating_phone"
-              id="floating_phone"
+              name="phone"
               class="peer block w-full appearance-none border-0 border-b border-stone-700/20 bg-transparent py-2.5 px-0 text-sm
                 text-stone-900 focus:border-stone-500 focus:outline-none focus:ring-0 dark:border-stone-300/20 dark:text-white
                 dark:focus:border-stone-500"
               placeholder=" "
               required/>
             <label
-              for="floating_phone"
+              for="phone"
               class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-base text-stone-500 duration-300
                 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6
                 peer-focus:scale-75 peer-focus:text-stone-500 dark:text-stone-200 peer-focus:dark:text-stone-500">
@@ -98,55 +96,62 @@
             </p>
           </div>
           {# Radio button to choose practitioner #}
-          <div class="group relative z-0 mb-2">
-            <fieldset class="text-base">
-              {# <legend class="text-base">Select psychologist:</legend> #}
-              {# <!-- Radio -->
-
-            </fieldset>
-          </div>
-          {# Testing new radio options #}
-          <div x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne', specialities: 'Complex Trauma and PTSD, Anxiety and Stress disorders' }, { id: 2, name: 'Kathleen', specialities: 'Trauma informed Cognitive Behavioural Therapy, Acceptance and Commitment Therapy, Solution Focused Therapy' }, ], }">
-            <label x-radio:label class="sr-only">Choose psychologist that you would like to see:
-              <span x-text="value"></span>
-            </label>
-            <legend class="text-base">Select psychologist</legend>
-            <div x-radio x-model="value" class="max-w-xl w-full">
-              <div class="mt-4 space-y-3">
-                <template x-for="item in values" :key="item.id">
-                  <div
-                    x-radio:option
-                    :value="item"
-                    name="chosen_psychologist"
-                    class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4  focus:outline-none
-                      focus:ring-4 ring-mh_green/50 dark:ring-mh_orange bg-inherit dark:bg-mh_orange/10"
-                    :class="{ 'shadow-sm': $radioOption.isChecked }"
-                    :class="{ 'bg-mh_green/10 dark:bg-mh_orange': $radioOption.isChecked }">
-                    <span
-                      :class="{ 'bg-mh_green/50 dark:bg-mh_orange': $radioOption.isChecked }"
-                      class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1
-                        ring-mh_green-50 dark:ring-mh_orange"
-                      aria-hidden="true"></span>
-                    <span
-                      class="ml-3 -mt-px">
-                      <!-- Primary Label -->
-                      <p x-radio:label x-text="item.name"></p>
-                      <!-- Secondary Information -->
-                      <div x-radio:description class="text-base">
-                        <span class="text-base">Specialities</span>
-                        <p class="text-sm" x-text="item.specialities"></p>
-                      </div>
-                    </span>
-                  </div>
-                </template>
+          <fieldset>
+            <legend class="text-base pb-4">Choose your preferred psychologist</legend>
+            <div class="flex flex-row text-lg">
+              <div class="group relative z-0 mb-2 w-full flex flex-row gap-2">
+                <input type="radio" name="psychologist" value="suzanne" class="w-6 h-6" checked/>
+                <label for="suzanne" class="">
+                  Suzanne</label>
+              </div>
+              <div class="group relative z-0 mb-2 w-full flex flex-row gap-2">
+                <input type="radio" name="psychologist" value="kathleen" class="w-6 h-6"/>
+                <label for="kathleen"class="">
+                  Kathleen</label>
               </div>
             </div>
-          </div>
-
-
+          </fieldset>
+          {# Testing new radio options #}
+          {# <div x-data="{ value: 'suzanne', values: [ { id: 1, name: 'Suzanne', specialities: 'Complex Trauma and PTSD, Anxiety and
+                        Stress disorders' }, { id: 2, name: 'Kathleen', specialities: 'Trauma informed Cognitive Behavioural Therapy, Acceptance
+                        and Commitment Therapy, Solution Focused Therapy' }, ], }">
+                      <label x-radio:label class="sr-only">Choose psychologist that you would like to see:
+                        <span x-text="value"></span>
+                      </label>
+                      <legend class="text-base">Select psychologist</legend>
+                      <div x-radio x-model="value" class="max-w-xl w-full">
+                        <div class="mt-4 space-y-3">
+                          <template x-for="item in values" :key="item.id">
+                            <div
+                              x-radio:option
+                              :value="item"
+                              name="chosen_psychologist"
+                              class="flex cursor-pointer rounded-md border border-gray-200 bg-white dark:bg-black p-4 focus:outline-none focus:ring-4
+                                ring-mh_green/50 dark:ring-mh_orange bg-inherit dark:bg-mh_orange/10"
+                              :class="{ 'shadow-sm': $radioOption.isChecked }"
+                              :class="{ 'bg-mh_green/10 dark:bg-mh_orange': $radioOption.isChecked }">
+                              <span
+                                :class="{ 'bg-mh_green/50 dark:bg-mh_orange': $radioOption.isChecked }"
+                                class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1
+                                  ring-mh_green-50 dark:ring-mh_orange"
+                                aria-hidden="true"></span>
+                              <span
+                                class="ml-3 -mt-px">
+                                <!-- Primary Label -->
+                                <p x-radio:label x-text="item.name"></p>
+                                <!-- Secondary Information -->
+                                <div x-radio:description class="text-base">
+                                  <span class="text-base">Specialities</span>
+                                  <p class="text-sm" x-text="item.specialities"></p>
+                                </div>
+                              </span>
+                            </div>
+                          </template>
+                        </div>
+                      </div>
+                    </div> #}
           {# Message area #}
-          <div class="group relative z-0 mb-2 w-full">
-            <label
+            <div class="group relative z-0 mb-2 w-full"> <label
               for="message"
               class="block py-2.5 text-base font-normal text-stone-500 peer-focus:text-stone-500 dark:text-stone-200">Optional message</label>
             <textarea
@@ -169,5 +174,13 @@
           </button>
         </div>
       </form>
+      {# <script type="text/javascript">
+        const form = document.querySelector('#myhill-form');
+        form.addEventListener('submit', (event) => {
+          event.preventDefault(); // prevent the default form submission behavior
+          const formData = new FormData(form);
+          console.log(Object.fromEntries(formData)); // log the form data as an object
+        });
+      </script> #}
     </div>
   </section>
